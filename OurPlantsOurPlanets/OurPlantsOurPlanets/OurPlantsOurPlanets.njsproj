@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>OurPlantsOurPlanets</Name>
+    <RootNamespace>OurPlantsOurPlanets</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0dffc911-5683-4fb8-91c2-45131160e085</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <None Include="OurPlantsOurPlanet - FTP.pubxml" />
+    <None Include="OurPlantsOurPlanet - ReadOnly - FTP.pubxml" />
+    <None Include="OurPlantsOurPlanet - Web Deploy.pubxml" />
+    <Content Include="public\fonts\.DS_Store" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\javascripts\.DS_Store" />
+    <Content Include="public\javascripts\GoogleMap.js" />
+    <Content Include="public\javascripts\GoogleMaps.js" />
+    <Content Include="public\PDF\Garden Care Guide - Yearly.pdf" />
+    <Content Include="public\stylesheets\flaticon.css" />
+    <Content Include="public\fonts\flaticon\.DS_Store" />
+    <Content Include="public\fonts\flaticon\backup.txt" />
+    <Content Include="public\fonts\flaticon\font\.DS_Store" />
+    <Content Include="public\fonts\flaticon\font\flaticon.css" />
+    <Content Include="public\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="public\fonts\flaticon\font\flaticon.html" />
+    <Content Include="public\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="public\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="public\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="public\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="public\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="public\fonts\flaticon\licence\.DS_Store" />
+    <Content Include="public\fonts\flaticon\licence\license.pdf" />
+    <Content Include="public\fonts\icomoon\icomoon.eot" />
+    <Content Include="public\fonts\icomoon\icomoon.svg" />
+    <Content Include="public\fonts\icomoon\icomoon.ttf" />
+    <Content Include="public\fonts\icomoon\icomoon.woff" />
+    <Content Include="public\fonts\icofont\demo.html" />
+    <Content Include="public\fonts\icofont\fonts\icofont.eot" />
+    <Content Include="public\fonts\icofont\fonts\icofont.svg" />
+    <Content Include="public\fonts\icofont\fonts\icofont.ttf" />
+    <Content Include="public\fonts\icofont\fonts\icofont.woff" />
+    <Content Include="public\fonts\icofont\fonts\icofont.woff2" />
+    <Content Include="public\fonts\icofont\icofont.css" />
+    <Content Include="public\fonts\icofont\icofont.min.css" />
+    <Content Include="public\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="public\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="public\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="public\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="public\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="public\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="public\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="public\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="public\images\about.jpg" />
+    <Content Include="public\images\back-ground1.jpg" />
+    <Content Include="public\images\background.1.jpg" />
+    <Content Include="public\images\backgroung.1.jpg" />
+    <Content Include="public\images\bg-weedcontrol.jpg" />
+    <Content Include="public\images\bg_1.jpg" />
+    <Content Include="public\images\bg_2.jpg" />
+    <Content Include="public\images\Cal-bg.jpg" />
+    <Content Include="public\images\calendar.jpg" />
+    <Content Include="public\images\flower-garden.jpg" />
+    <Content Include="public\images\gallery-1.jpg" />
+    <Content Include="public\images\gallery-2.jpg" />
+    <Content Include="public\images\gallery-3.jpg" />
+    <Content Include="public\images\gallery-4.jpg" />
+    <Content Include="public\images\gallery-5.jpg" />
+    <Content Include="public\images\gallery-6.jpg" />
+    <Content Include="public\images\gallery-7.jpg" />
+    <Content Include="public\images\gallery-8.jpg" />
+    <Content Include="public\images\gallery-9.jpg" />
+    <Content Include="public\images\grass.jpg" />
+    <Content Include="public\images\image_1.jpg" />
+    <Content Include="public\images\image_2.jpg" />
+    <Content Include="public\images\image_3.jpg" />
+    <Content Include="public\images\image_4.jpg" />
+    <Content Include="public\images\image_5.jpg" />
+    <Content Include="public\images\image_6.jpg" />
+    <Content Include="public\images\loc.png" />
+    <Content Include="public\images\no-image.jpg" />
+    <Content Include="public\images\person_1.jpeg" />
+    <Content Include="public\images\person_1.jpg" />
+    <Content Include="public\images\person_2.jpeg" />
+    <Content Include="public\images\person_2.jpg" />
+    <Content Include="public\images\person_3.jpeg" />
+    <Content Include="public\images\person_3.jpg" />
+    <Content Include="public\images\person_4.jpeg" />
+    <Content Include="public\images\person_4.jpg" />
+    <Content Include="public\images\person_5.jpg" />
+    <Content Include="public\images\person_6.jpg" />
+    <Content Include="public\images\person_7.jpg" />
+    <Content Include="public\images\person_8.jpg" />
+    <Content Include="public\images\practice-1.jpg" />
+    <Content Include="public\images\roses.jpg" />
+    <Content Include="public\images\seasoanl-5.jpg" />
+    <Content Include="public\images\seasonal-1.jpg" />
+    <Content Include="public\images\seasonal-2.jpg" />
+    <Content Include="public\images\seasonal-3.jpg" />
+    <Content Include="public\images\seasonal-4.jpg" />
+    <Content Include="public\images\seasonal-6.jpg" />
+    <Content Include="public\images\Team Logo.jpg" />
+    <Content Include="public\javascripts\bootstrap.min.js" />
+    <Content Include="public\javascripts\google-map.js" />
+    <Content Include="public\javascripts\jquery-3.2.1.min.js" />
+    <Content Include="public\javascripts\jquery-migrate-3.0.1.min.js" />
+    <Content Include="public\javascripts\jquery.animateNumber.js" />
+    <Content Include="public\javascripts\jquery.counterup.min.js" />
+    <Content Include="public\javascripts\jquery.easing.1.3.js" />
+    <Content Include="public\javascripts\jquery.magnific-popup.min.js" />
+    <Content Include="public\javascripts\jquery.min.js" />
+    <Content Include="public\javascripts\jquery.stellar.min.js" />
+    <Content Include="public\javascripts\jquery.waypoints.min.js" />
+    <Content Include="public\javascripts\main.js" />
+    <Content Include="public\javascripts\NavBar-active.js" />
+    <Content Include="public\javascripts\owl.carousel.min.js" />
+    <Content Include="public\javascripts\page-scroll.js" />
+    <Content Include="public\javascripts\popper.min.js" />
+    <Content Include="public\javascripts\scrollax.min.js" />
+    <Content Include="public\javascripts\tips-calendar.js" />
+    <Content Include="public\javascripts\weed-Encyclopedia.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\weedDetailedDesc.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\weedPaginate.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\animate.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\bootstrap-datepicker.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.css.map">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\bootstrap-theme.min.css" />
+    <Content Include="public\stylesheets\bootstrap-theme.min.css.map" />
+    <Content Include="public\stylesheets\bootstrap.css" />
+    <Content Include="public\stylesheets\bootstrap.css.map" />
+    <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\bootstrap.min.css.map" />
+    <Content Include="public\stylesheets\bootstrap\bootstrap-grid.css" />
+    <Content Include="public\stylesheets\bootstrap\bootstrap-reboot.css" />
+    <Content Include="public\stylesheets\css\bootstrap-reboot.css" />
+    <Content Include="public\stylesheets\icofont.css" />
+    <Content Include="public\stylesheets\icofont.min.css" />
+    <Content Include="public\stylesheets\icomoon.css" />
+    <Content Include="public\stylesheets\ionicons.min.css" />
+    <Content Include="public\stylesheets\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\bootstrap.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_alert.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_badge.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_button-group.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_buttons.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_card.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_carousel.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_close.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_code.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_dropdown.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_forms.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_functions.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_grid.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_images.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_input-group.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_list-group.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_media.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_mixins.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_modal.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_nav.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_navbar.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_pagination.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_popover.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_print.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_progress.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_reboot.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_root.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_spinners.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_tables.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_toasts.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_tooltip.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_transitions.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_type.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_utilities.scss" />
+    <Content Include="public\stylesheets\scss\bootstrap\_variables.scss" />
+    <Content Include="public\stylesheets\Site.css" />
+    <Content Include="public\stylesheets\style.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\owl.theme.default.min.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\owl.carousel.min.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\magnific-popup.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\stylesheets\scss\style.scss">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\gardenCare.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\index.js" />
+    <Content Include="routes\weedDescription.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\weedEncyclopedia.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\weedManagement.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\weedControl.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\weedIdentifier.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\users.js" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="README.md" />
+    <Content Include="routes\weedPrevention.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\footer.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\gardenCare.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\header1.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\HowWeHelpSection.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\index.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\error.pug" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\fonts\flaticon\" />
+    <Folder Include="public\fonts\flaticon\font\" />
+    <Folder Include="public\fonts\flaticon\licence\" />
+    <Folder Include="public\fonts\icofont\" />
+    <Folder Include="public\fonts\icomoon\" />
+    <Folder Include="public\fonts\icofont\fonts\" />
+    <Folder Include="public\fonts\ionicons\" />
+    <Folder Include="public\fonts\ionicons\css\" />
+    <Folder Include="public\fonts\ionicons\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\PDF\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="public\stylesheets\css\" />
+    <Folder Include="public\stylesheets\bootstrap\" />
+    <Folder Include="public\stylesheets\scss\" />
+    <Folder Include="public\stylesheets\scss\bootstrap\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="views\Page2.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\prepros-6.config" />
+    <Content Include="views\searchForm.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\weedEncyclopedia.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\weedManagement.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\weedControl.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\weedIdentifier.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

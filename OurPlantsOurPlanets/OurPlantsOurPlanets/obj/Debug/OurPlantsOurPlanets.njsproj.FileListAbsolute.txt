@@ -1,0 +1,2 @@
+C:\Users\Nimisha\source\repos\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Debug\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\source\repos\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,0 +1,12 @@
+'use strict';
+var express = require('express');
+var router = express.Router();
+var mysql = require('mysql');
+const path = require('path');
+
+/* GET identifier page. */
+router.get('/', function (req, res) {
+    res.sendFile(path.join('D:/home/site/wwwroot' + '/views/gardenCare.html'));
+});
+
+module.exports = router;
