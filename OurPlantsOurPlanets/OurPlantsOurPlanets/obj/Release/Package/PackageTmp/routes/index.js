@@ -4,6 +4,7 @@ var router = express.Router();
 var mysql = require('mysql');
 const path = require('path');
 
+
 var connection = mysql.createConnection({
     host: '127.0.0.1',
     port: 50760,
@@ -23,6 +24,9 @@ connection.query('SELECT common_name from weed limit 1', function (error, result
 
 /* GET home page. */
 router.get('/', function (req, res) {
+    if (!req.session.allowedAccess) {
+        res.redirect('/authenticate');
+    }
     //res.render('index', { title: path.join(__dirname +'/views/Page2.cshtml')  });
     res.sendFile(path.join('D:/home/site/wwwroot' + '/views/Page2.html'));
 });

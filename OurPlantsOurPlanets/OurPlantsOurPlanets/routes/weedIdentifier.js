@@ -6,7 +6,7 @@ const path = require('path');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
-//database credentials
+
 var connection = mysql.createConnection({
     host: '127.0.0.1',
     port: 50760,
@@ -14,30 +14,25 @@ var connection = mysql.createConnection({
     password: '6#vWHD_$',
     database: 'opopdb'
 });
-//make connections
 connection.connect();
-
-//initialize parser for post data
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 /* GET identifier page. */
 router.get('/', function (req, res) {
+    if (!req.session.allowedAccess) {
+        res.redirect('/authenticate');
+    }
     //res.render('index', { title: path.join(__dirname +'/views/weedIdentifier.cshtml')  });
     res.sendFile(path.join('D:/home/site/wwwroot' + '/views/weedIdentifier.html'));
 });
 
-//post request method
 router.post('/search', urlencodedParser, function (req, res) {
-    //initialize html string that is to be deployed
     var htmlString = "";
-    //get header
     fs.readFile(path.join('D:/home/site/wwwroot' + '/views/header1.html'), function (err, data) {
         htmlString = htmlString + data.toString();
-        //get image and serach form
         fs.readFile(path.join('D:/home/site/wwwroot' + '/views/searchForm.html'), function (err, data) {
             var queryString = 'SELECT common_name,img_link, basic_description from weed where common_name like \'%' + req.body.subject + '%\'';
             htmlString = htmlString + data.toString().substr(1);
-            //queries for different request combinations
             if (req.body.email != "Any" && req.body.appearance != "Any") {
                 if (req.body.postcode != "") {
                     queryString = 'SELECT weed.common_name,img_link, basic_description from weed join flowers on weed.common_name = flowers.common_name join appearance on weed.common_name = appearance.common_name join weed_control_region on weed.common_name = weed_control_region.common_name where weed.common_name like \'%' + req.body.subject.toLowerCase() + '%\'';
@@ -75,10 +70,8 @@ router.post('/search', urlencodedParser, function (req, res) {
                     queryString = queryString + ' AND postcode =' + req.body.postcode;
                 }
             }
-            //make query
             connection.query(queryString, function (error, results, fields) {
                 if (error) var name = 'problem';
-                //make sections throught layout
                 htmlString = htmlString + '<div class="bg-light" style="width:100%;text-align:center"><div>';
                 if (results.length == 0) {
                     htmlString = htmlString + "<b><i>No results were found for the given criteria</i></b>";
@@ -90,7 +83,6 @@ router.post('/search', urlencodedParser, function (req, res) {
                 var divNumber = 0;
                 if (error) var name = 'problem';
                 for (var i = 0; i < results.length; i++) {
-                    //print cards
                     if (Math.ceil((i + 1) / 12) > divNumber) {
                         divNumber = divNumber + 1;
                         htmlString = htmlString + '<div style="display:none" class="number-content" id="' + Math.ceil((i + 1) / 12) + '">';
@@ -118,7 +110,6 @@ router.post('/search', urlencodedParser, function (req, res) {
                     }
                 }
                 htmlString = htmlString + '</div></div></section>';
-                //pagination section
                 if (results.length > 12) {
                     htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
                     for (var j = 0; j < Math.ceil(results.length / 12); j++) {
@@ -133,11 +124,8 @@ router.post('/search', urlencodedParser, function (req, res) {
                     htmlString = htmlString + '</div></div></section>';
                 }
             });
-            //add dependencies
             htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weedPaginate.js" ></script >';
-            //get footer
             fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
-                //launch application
                 htmlString = htmlString + data.toString();
                 res.send(htmlString);
             });

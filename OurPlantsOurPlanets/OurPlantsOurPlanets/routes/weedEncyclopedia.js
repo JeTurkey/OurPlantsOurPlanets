@@ -14,29 +14,27 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-/* GET encyclopaedia page page. */
+/* GET identifier page. */
 router.get('/', function (req, res) {
-    //initialize html string that will be deployed
+    if (!req.session.allowedAccess) {
+        res.redirect('/authenticate');
+    }
+    //res.render('index', { title: path.join(__dirname +'/views/weedIdentifier.cshtml')  });
     var htmlString = "";
-    //get header section
     fs.readFile(path.join('D:/home/site/wwwroot' + '/views/header1.html'), function (err, data) {
         htmlString = htmlString + data.toString();
-        //get weed encyclopaedia image 
         fs.readFile(path.join('D:/home/site/wwwroot' + '/views/weedEncyclopedia.html'), function (err, data) {
             htmlString = htmlString + data.toString().substr(1);
-            //create section for alphabet buttons
             htmlString = htmlString + '<section class="ftco-section"> <div class=" cal row pt-3" style="margin-left:40px; margin-right:40px">';
             var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
             alphabet.forEach(printAlpha);
             function printAlpha(item, index) {
-                //make first button active by default
                 if (item == "A") {
                     htmlString = htmlString + '<div class="alphabet d-flex justify-content-center align-items-center active"> ';
                 }
                 else {
                     htmlString = htmlString + '<div class="alphabet d-flex justify-content-center align-items-center"> ';
                 }
-                //configure buttons that are disabled
                 if (item == "J" || item == "L" || item == "O" || item == "Q" || item == "U" || item == "X" || item == "Z" || item == "V" || item == "Y") {
                     htmlString = htmlString + '<a class="alphabet-name" id="' + item.toLowerCase() + 'button" style="color:LightGray">';
                 } else {
@@ -61,7 +59,6 @@ router.get('/', function (req, res) {
             </div>
           </div>*/
             function printCard(item, index) {
-                //query to get information by alphabet
                 var queryString = 'SELECT common_name, basic_description,img_link from weed where common_name like \'' + item.toLowerCase() + '%\'';
                 connection.query(queryString, function (error, results, fields) {
                         htmlString = htmlString + '<div style="display:none" class="alphabet-content" id="' + item.toLowerCase() + '">';
@@ -69,7 +66,6 @@ router.get('/', function (req, res) {
 
                     if (error) var name = 'problem';
                     for (var i = 0; i < results.length; i++) {
-                        //display each cars
                         var replacement = results[i].basic_description;
                         if (results[i].basic_description.toString().length < 105) {
                             var remaining = 108 - results[i].basic_description.length;
@@ -94,13 +90,10 @@ router.get('/', function (req, res) {
                     
                 });
             }
-            //add dependencies
             htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weed-Encyclopedia.js" ></script >';
-            //get footer
             fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
                 htmlString = htmlString + data.toString();
                 htmlString = htmlString.replace("65279", "");
-                //launch page
                 res.send(htmlString);
             });
         });

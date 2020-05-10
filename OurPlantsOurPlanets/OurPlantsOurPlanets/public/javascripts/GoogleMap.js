@@ -31,7 +31,7 @@ function initMap() {
                 map: map,
                 position: pos,
                 icon: {
-                    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                    url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
                 }
             });
             infoWindow.setPosition(pos);
@@ -72,7 +72,7 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
         map: map,
         position: pos,
         icon: {
-            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+            url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
         }
     });
     infoWindow.open(map);
