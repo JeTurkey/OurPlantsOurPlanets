@@ -40,6 +40,7 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\stores.png" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
@@ -241,6 +242,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\index.js" />
+    <Content Include="routes\stores.js" />
     <Content Include="routes\weedDescription.js">
       <SubType>Code</SubType>
     </Content>
@@ -316,6 +318,7 @@
     <Content Include="views\searchForm.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\stores.html" />
     <Content Include="views\weedEncyclopedia.html">
       <SubType>Code</SubType>
     </Content>
