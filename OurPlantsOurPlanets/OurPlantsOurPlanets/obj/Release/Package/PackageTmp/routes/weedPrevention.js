@@ -33,7 +33,8 @@ router.get('/', function (req, res) {
                 var queryString = 'SELECT weed.common_name, img_link,basic_description,month from weed join germination on weed.common_name=germination.common_name where month = "' + months[new Date().getMonth()] + '"';
                 connection.query(queryString, function (error, results, fields) {
                     if (error) var name = 'problem';
-                    htmlString = htmlString + '<section class="ftco-section bg-light"><div class="row justify-content-center" style="background-color:#4e9525;color:white;margin-bottom:0"><div class="btn btn-link" style="font-size:25px;margin:0;width:100%" type="button" data-toggle="collapse" data-target="#collapseOne""><div class="btn btn-link c1 h2" style="font-size:25px;color:white;text-decoration:none;margin:0;float:left" type="button" data-toggle="collapse" data-target="#collapseOne""> </div><h2 class="btn btn-link h2" style="font-size: 25px;color:white;text-decoration:none; margin: 0" type="button" data-toggle="collapse" data-target="#collapseOne"" > ' + months[(new Date().getMonth())] + '</h2 ></div ></div > <div class="container collapse show" id="collapseOne"><div class="row d-flex">';
+                    htmlString = htmlString + '<section class="ftco-section bg-light"><div class="row justify-content-center" style="background-color:#4e9525;color:white;margin-bottom:0"><div class="btn btn-link" style="font-size:25px;margin:0;width:100%" type="button" data-toggle="collapse" data-target="#collapseOne""><div class="btn btn-link c1 h2" style="font-size:25px;color:white;text-decoration:none;margin:0;float:left" type="button" data-toggle="collapse" data-target="#collapseOne""> </div><h2 class="btn btn-link h2" style="font-size: 25px;color:white;text-decoration:none; margin: 0" type="button" data-toggle="collapse" data-target="#collapseOne"" > ' + months[(new Date().getMonth())] + '</h2 ></div ></div > ';
+                   
                     var divNumber = 0;
                     if (results.length > 6) {
                         htmlString = htmlString + '<div class="container row" id="collapseOne"><div class="col text-center"><div class="block-27"><ul>';
@@ -48,7 +49,7 @@ router.get('/', function (req, res) {
                         }
                         htmlString = htmlString + '</ul></div></div></div>';
                     }
-                    htmlString = htmlString + '<div class="container" id="collapseOne"><div class="row d-flex justify-content-center">';
+                    htmlString = htmlString + '<div class="container" id="collapseOne"><div class="row d-flex">';
 
                     for (var i = 0; i < results.length; i++) {
                         if (Math.ceil((i + 1) / 6) > divNumber) {
@@ -74,7 +75,7 @@ router.get('/', function (req, res) {
                         }
 
                     }
-                    htmlString = htmlString + '</div></div></div>';
+                    htmlString = htmlString + '</div></div>';
                     if (results.length > 6) {
                         htmlString = htmlString + '<div class="container row" id="collapseOne"><div class="col text-center"><div class="block-27"><ul>';
                         for (var j = 0; j < Math.ceil(results.length / 6); j++) {
