@@ -17,9 +17,11 @@ var weedIdentifier = require('./routes/weedIdentifier');
 var weedControl = require('./routes/weedControl');
 var weedManagement = require('./routes/weedManagement');
 var gardenCare = require('./routes/gardenCare');
+var gardens = require('./routes/gardens');
 var weedEncyclopedia = require('./routes/weedEncyclopedia');
 var weedDescription = require('./routes/weedDescription');
 var weedPrevention = require('./routes/weedPrevention');
+var searchPlants = require('./routes/searchPlants');
 var error404 = require('./routes/error404');
 var app = express();
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
@@ -44,11 +46,12 @@ app.use('/weedIdentifier', weedIdentifier);
 app.use('/weedControl', weedControl);
 //
 app.use('/gardenCare', gardenCare);
+app.use('/gardens', gardens);
 app.use('/weedManagement', weedManagement);
 app.use('/weedEncyclopedia', weedEncyclopedia);
 app.use('/weedDescription', weedDescription);
 app.use('/weedPrevention', weedPrevention);
-
+app.use('/searchPlants', searchPlants);
 
 
 

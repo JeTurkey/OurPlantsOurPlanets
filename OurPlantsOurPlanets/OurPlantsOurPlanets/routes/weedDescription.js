@@ -26,7 +26,7 @@ router.get('/', function (req, res) {
         htmlString = htmlString.replace("&#65279", "");
         fs.readFile(path.join('D:/home/site/wwwroot' + '/views/weedEncyclopedia.html'), function (err, data) {
             htmlString = htmlString + data.toString().substr(1).replace("Weed Encyclopaedia", req.query.id);
-            var queryString = 'SELECT * from weed where common_name="' + req.query.id+'"';
+            var queryString = 'select weed.common_name,weed.scientific_name,weed.img_link,weed.appearance_description,weed.basic_description,weed.stems_description,weed.leaves_description,weed.flowers_description, weed.fruit_description,weed.seeds_description,weed.root_description,weed.control_description, GROUP_CONCAT(DISTINCT leave_category SEPARATOR ", ") as leaf, GROUP_CONCAT(DISTINCT stem_type SEPARATOR ", ") as stem, GROUP_CONCAT(DISTINCT color SEPARATOR ", ") as flower, GROUP_CONCAT(DISTINCT fruit_type SEPARATOR ", ") as fruit, GROUP_CONCAT(DISTINCT seeds_type SEPARATOR ", ") as seed from weed left outer join leaves ON weed.common_name = leaves.common_name left outer join stems on weed.common_name = stems.common_name left outer join flowers on weed.common_name = flowers.common_name left outer join fruit on weed.common_name = fruit.common_name left outer join seeds on seeds.common_name = weed.common_name  where weed.common_name="' + req.query.id +'"  GROUP by weed.common_name';
             connection.query(queryString, function (error, results, fields) {
                 if (error) var name = 'problem';
                 htmlString = htmlString + '<section class="ftco-section align-content-center" style="background:Transparent">';
@@ -46,7 +46,15 @@ router.get('/', function (req, res) {
                 htmlString = htmlString + '</a></div>';
                 htmlString = htmlString + '</div></div></section>';
                 htmlString = htmlString + '<div style="display:none;margin:7px" class="desc-content" id="Anatomy">';
-                htmlString = htmlString + '<img style="float:left;margin:20px 20px 10px 20px" src="' + results[0].img_link + '">';
+                htmlString = htmlString + '<table style="float:left;margin:20px 20px 10px 20px"><tr>'
+                htmlString = htmlString + '<td colspan="2"><img  src="' + results[0].img_link + '"></td></tr>';
+                if (results[0].leaf) {
+                    htmlString = htmlString + '<tr><td>Leaf</td><td id="leaf">' + results[0].leaf + '</td></tr>';
+                }
+                htmlString = htmlString + '<tr><td>Stem</td><td id="stem">' + results[0].stem + '</td></tr>';
+                htmlString = htmlString + '<tr><td>Flower</td><td id="flower">' + results[0].flower + '</td></tr>';
+                htmlString = htmlString + '<tr><td>Fruit</td><td id="fruit">' + results[0].fruit + '</td></tr>';
+                htmlString = htmlString + '<tr><td>Seed</td><td id="seed">' + results[0].seed + '</td></tr></table>';
                 htmlString = htmlString + '<p><b style="color:black">Scientific Name: </b>' + results[0].scientific_name + '</p>';
                 htmlString = htmlString + '<p><b style="color:black">Leaf: </b>' + results[0].leaves_description + '</p>';
                 htmlString = htmlString + '<p><b style="color:black">Stem: </b>' + results[0].stems_description + '</p>';
@@ -68,6 +76,7 @@ router.get('/', function (req, res) {
                             }
                             }
                         htmlString = htmlString + '</table></div></section>';
+                        
                     }
                 });
             });
@@ -78,6 +87,7 @@ router.get('/', function (req, res) {
             });
         });
     });
+   
 });
 
 module.exports = router;

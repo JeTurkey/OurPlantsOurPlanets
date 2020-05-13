@@ -40,6 +40,12 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\compost.jpg" />
+    <Content Include="public\images\garden-hand.jpg" />
+    <Content Include="public\images\mulch.jpg" />
+    <Content Include="public\images\sleeping-weeds.jpg" />
+    <Content Include="public\images\tools.jpg" />
+    <Content Include="public\images\victoria-guide.jpg" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
@@ -240,7 +246,11 @@
     <Content Include="routes\gardenCare.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\gardens.js" />
     <Content Include="routes\index.js" />
+    <Content Include="routes\searchPlants.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\weedDescription.js">
       <SubType>Code</SubType>
     </Content>
@@ -272,6 +282,7 @@
     <Content Include="views\gardenCare.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\gardens.html" />
     <Content Include="views\header1.html">
       <SubType>Code</SubType>
     </Content>
@@ -314,6 +325,9 @@
     </Content>
     <Content Include="views\prepros-6.config" />
     <Content Include="views\searchForm.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\searchPlants.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\weedEncyclopedia.html">
