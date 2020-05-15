@@ -47,6 +47,9 @@
     <Content Include="public\images\tools.jpg" />
     <Content Include="public\images\victoria-guide.jpg" />
     <Content Include="public\javascripts\.DS_Store" />
+    <Content Include="public\javascripts\addToCollection.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
     <Content Include="public\PDF\Garden Care Guide - Yearly.pdf" />
@@ -248,6 +251,9 @@
     </Content>
     <Content Include="routes\gardens.js" />
     <Content Include="routes\index.js" />
+    <Content Include="routes\plantCollection.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\searchPlants.js">
       <SubType>Code</SubType>
     </Content>
