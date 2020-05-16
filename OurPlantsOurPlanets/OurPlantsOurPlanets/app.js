@@ -22,6 +22,7 @@ var weedDescription = require('./routes/weedDescription');
 var weedPrevention = require('./routes/weedPrevention');
 var error404 = require('./routes/error404');
 var stores = require('./routes/stores');
+var stores = require('./routes/mulchCal');
 
 var app = express();
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
@@ -51,7 +52,7 @@ app.use('/weedEncyclopedia', weedEncyclopedia);
 app.use('/weedDescription', weedDescription);
 app.use('/weedPrevention', weedPrevention);
 app.use('/stores', stores);
-
+app.use('/mulchCal', mulchCal);
 
 
 // catch 404 and forward to error handler
