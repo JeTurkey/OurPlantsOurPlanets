@@ -13718,7 +13718,7 @@ p {
     background-color: #4e9525;
     padding: 5px;
     color: white;
-    border-radius: 20px;
+    border-radius: 3px;
     margin-left: 70px;
     width: fit-content;
     margin: auto;
@@ -14678,8 +14678,8 @@ input:focus, button:focus {
 /*Compost pdf*/
 .btn-download-flip {
     background-color: #fbd341;
-    padding: 15px;
-    border-radius: 20px;
+    padding: 5px;
+    border-radius: 3px;
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0px 3px #cccccc85;
