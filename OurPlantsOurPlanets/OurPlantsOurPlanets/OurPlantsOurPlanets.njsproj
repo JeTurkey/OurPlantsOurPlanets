@@ -40,6 +40,9 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\comp-video-img.jpeg" />
+    <Content Include="public\images\compost-cal.jpeg" />
+    <Content Include="public\images\compost-icon.png" />
     <Content Include="public\images\leaf.jpg" />
     <Content Include="public\images\mulch-cal.jpg" />
     <Content Include="public\images\mulch-cardboard.jpeg" />
@@ -53,6 +56,7 @@
     <Content Include="public\images\stores.png" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\Calculator.js" />
+    <Content Include="public\javascripts\CompostCalculator.js" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
     <Content Include="public\PDF\Garden Care Guide - Yearly.pdf" />
@@ -253,6 +257,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="routes\index.js" />
+    <Content Include="routes\compostCal.js" />
     <Content Include="routes\mulchCal.js" />
     <Content Include="routes\stores.js" />
     <Content Include="routes\weedDescription.js">
@@ -320,6 +325,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\compostCal.html" />
     <Content Include="views\Page2.html">
       <SubType>Code</SubType>
     </Content>

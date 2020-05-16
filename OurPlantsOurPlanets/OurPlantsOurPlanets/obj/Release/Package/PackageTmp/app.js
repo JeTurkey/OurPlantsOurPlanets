@@ -21,6 +21,9 @@ var weedEncyclopedia = require('./routes/weedEncyclopedia');
 var weedDescription = require('./routes/weedDescription');
 var weedPrevention = require('./routes/weedPrevention');
 var error404 = require('./routes/error404');
+var stores = require('./routes/stores');
+var mulchCal = require('./routes/mulchCal');
+
 var app = express();
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
 
@@ -48,7 +51,8 @@ app.use('/weedManagement', weedManagement);
 app.use('/weedEncyclopedia', weedEncyclopedia);
 app.use('/weedDescription', weedDescription);
 app.use('/weedPrevention', weedPrevention);
-
+app.use('/mulchCal', mulchCal);
+app.use('/stores', stores);
 
 
 

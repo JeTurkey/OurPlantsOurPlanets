@@ -10,3 +10,6 @@ C:\Users\Nimisha\Downloads\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Mic
 C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
 C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
 C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
