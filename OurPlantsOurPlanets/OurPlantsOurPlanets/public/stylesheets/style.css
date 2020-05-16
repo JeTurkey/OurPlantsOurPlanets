@@ -14633,21 +14633,21 @@ input:focus, button:focus {
 
 /*Mulch background*/
 #mulchbg-section {
-    background-image: url('../../Theme_Images/mulch-background.jpg');
+    background-image: url('/images/mulch-background.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 /*Compost background*/
 #compostbg-section {
-    background-image: url('../../Theme_Images/Compost-background.jpg');
+    background-image: url('/images/Compost-background.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
  /*Stores background*/
 #suppliers {
-    background-image: url('../../Theme_Images/garden-suppliers.jpg');
+    background-image: url('/images/garden-suppliers.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }

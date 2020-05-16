@@ -24,6 +24,7 @@ var error404 = require('./routes/error404');
 var stores = require('./routes/stores');
 var mulchCal = require('./routes/mulchCal');
 var compostCal = require('./routes/compostCal');
+var calculatorService = require('./routes/calculatorService');
 
 var app = express();
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
@@ -55,7 +56,7 @@ app.use('/weedPrevention', weedPrevention);
 app.use('/mulchCal', mulchCal);
 app.use('/compostCal', compostCal);
 app.use('/stores', stores);
-
+app.use('/calculatorService', calculatorService);
 
 
 // catch 404 and forward to error handler

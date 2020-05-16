@@ -41,9 +41,13 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="public\images\comp-video-img.jpeg" />
+    <Content Include="public\images\Compost-background.jpg" />
     <Content Include="public\images\compost-cal.jpeg" />
     <Content Include="public\images\compost-icon.png" />
+    <Content Include="public\images\garden-suppliers.jpg" />
+    <Content Include="public\images\gardening-101.jpeg" />
     <Content Include="public\images\leaf.jpg" />
+    <Content Include="public\images\mulch-background.jpg" />
     <Content Include="public\images\mulch-cal.jpg" />
     <Content Include="public\images\mulch-cardboard.jpeg" />
     <Content Include="public\images\mulch-landscape.jpeg" />
@@ -250,6 +254,7 @@
     <Content Include="routes\authenticate.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\calculatorService.js" />
     <Content Include="routes\error404.js">
       <SubType>Code</SubType>
     </Content>
@@ -341,6 +346,7 @@
     <Content Include="views\weedEncyclopedia.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\calculatorService.html" />
     <Content Include="views\weedManagement.html">
       <SubType>Code</SubType>
     </Content>
