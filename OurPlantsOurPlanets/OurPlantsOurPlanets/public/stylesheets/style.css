@@ -49,8 +49,12 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+tr:nth-child(odd) {
+    background-color: #4e952524;
+}
+
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: white;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {

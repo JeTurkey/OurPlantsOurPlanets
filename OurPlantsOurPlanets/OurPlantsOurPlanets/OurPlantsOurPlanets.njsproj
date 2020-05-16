@@ -46,12 +46,19 @@
     <Content Include="public\images\sleeping-weeds.jpg" />
     <Content Include="public\images\tools.jpg" />
     <Content Include="public\images\victoria-guide.jpg" />
+    <Content Include="public\images\stores.png" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\addToCollection.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="public\javascripts\analytics.js" />
+    <Content Include="public\javascripts\Chart.min.js" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
+    <Content Include="public\javascripts\polarChart.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\utils.js" />
     <Content Include="public\PDF\Garden Care Guide - Yearly.pdf" />
     <Content Include="public\stylesheets\flaticon.css" />
     <Content Include="public\fonts\flaticon\.DS_Store" />
@@ -257,6 +264,7 @@
     <Content Include="routes\searchPlants.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\stores.js" />
     <Content Include="routes\weedDescription.js">
       <SubType>Code</SubType>
     </Content>
@@ -336,6 +344,7 @@
     <Content Include="views\searchPlants.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\stores.html" />
     <Content Include="views\weedEncyclopedia.html">
       <SubType>Code</SubType>
     </Content>

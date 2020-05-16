@@ -64,11 +64,19 @@ router.get('/', function (req, res) {
                 htmlString = htmlString + '<p><b style="color:black">Seeds: </b>' + results[0].seeds_description + '</p>';
                 htmlString = htmlString + '</div>';
                 htmlString = htmlString + '<div style="display:none" class="desc-content" id="ControlMethods">';
-                htmlString = htmlString + '<p>' + results[0].control_description + '</p></div>';
+                var controlMethods = results[0].control_description.split("$$");
+                htmlString = htmlString + "<ul>";
+                for (var t = 0; t < controlMethods; t++){
+                    htmlString = htmlString + '<li>' + results[0].control_description.replace("$$", "<br />") + '</li>';
+                }
+                htmlString = htmlString + "</ul></div>";
                 queryString = 'SELECT * from impact_assessment where common_name="' + req.query.id + '"';
                 connection.query(queryString, function (error, results, fields) {
                     htmlString = htmlString + '<div style="display:none" class="desc-content" id="Impact">';
                     if (results.length > 0) {
+                        htmlString = htmlString + '<div id="canvas-holder" style="width:50%"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div><canvas id = "chart-area" style = "display: block; width: 952px; height: 476px;" width = "952" height = "476" class="chartjs-render-monitor" ></canvas ></div >';
+                        htmlString = htmlString + '<script src = "/javascripts/polarChart.js" ></script>';
+
                         htmlString = htmlString + '<table style="width:80%;margin-left:10%;margin-right:10%;border:1px solid grey;border-collapse:collapse"><tr><th style="border:1px solid grey;padding:5px">Impact Type</th><th style="border:1px solid grey;padding:5px">Impact Description</th><th style="border:1px solid grey;padding:5px">Impact Level</th></tr>';
                         for (var i = 0; i < results.length; i++) {
                             if (results[i].impact_level != "") {

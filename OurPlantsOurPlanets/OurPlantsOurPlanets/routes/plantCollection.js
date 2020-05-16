@@ -13,6 +13,11 @@ var connection = mysql.createConnection({
     database: 'opopdb'
 });
 connection.connect();
+
+router.post('/', function (req, res) {
+    req.session.acookie = req.session.acookie.split("," + req.query.id).join("");
+    res.redirect("/plantCollection");
+});
 /* GET identifier page. */
 router.get('/', function (req, res) {
     if (!req.session.allowedAccess) {
@@ -39,7 +44,8 @@ router.get('/', function (req, res) {
                 }
                 var queryString = 'SELECT * from native_flora where common_name in (' + list + ');';
                 connection.query(queryString, function (error, results, fields) {
-                    htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container col-md-12" id="collapseOne"><div class="row d-flex col-md-8">';
+                    htmlString = htmlString + '<div class="col-md-12 heading-section" style="text-align:center"><span class="subheading" style="width:100%;text-align:center"> Garden Overview </span><h2 class="mb-4" style="width:100%;text-align:center">Your Plant Combination</h2></div>';
+                    htmlString = htmlString + '<section class="ftco-section"><div class="container col-md-12" id="collapseOne"><div class="row d-flex col-md-8 justify-content-center align-items-center" style="">';
                     var maxheight = 0;
                     var minheight = 1000;
                     var color = ['Pink', 'White', 'Purple', 'Plum', 'Ivory', 'Red', 'Yellow', 'Black', 'Cream', 'Orange', 'Brown', 'Green'];
@@ -87,15 +93,35 @@ router.get('/', function (req, res) {
                         if (colorsPresent[i] == true) {
                             colorString = colorString + color[i] + ",";
                         }
+
                     }
                     htmlString = htmlString + '</div><div class="container col-md-4">';
-                    htmlString = htmlString + '<table style="width:100%;text-align:center"><tr><th style="text-align:center">Garden Overview</th></tr><tr>';
+                    htmlString = htmlString + '<table style="width:100%;text-align:center;margin-left:20px"><tr><th style="text-align:center;background-color:#4e9525;color:white;padding:8px">Garden Overview</th></tr><tr>';
                     htmlString = htmlString + "<td>Height:<br/> " + minheight + " - " + maxheight + "meters</td></tr>";
                     htmlString = htmlString + "<tr><td>Soil Textures:<br/> " + textureString.substr(0, textureString.length - 1) + "</td></tr>";
                     htmlString = htmlString + "<tr><td>Seasons:<br/> " + seasonString.substr(0, seasonString.length - 1) + "</td></tr>";
                     htmlString = htmlString + "<tr><td>Flower Colors:<br/> " + colorString.substr(0, colorString.length - 1) + "</td></tr>";
                     htmlString = htmlString + "</table>";
                     htmlString = htmlString + "</div></div></section>";
+                    
+                    for (var t = 0; t < results.length; t++) {
+                        if (t == 0) {
+                            htmlString = htmlString + '<div class="col-md-12 heading-section" style="text-align:center"><span class="subheading" style="width:100%;text-align:center"> Your Plants </span><h2 class="mb-4" style="width:100%;text-align:center">Plants in Your Collection</h2></div>';
+                            htmlString = htmlString + '<table class="container col-md12" style="width:100%">';
+                            htmlString = htmlString + '<tr style="background-color:#4e9525;color:white;text-align:center"><th>Image</th><th style="padding:10px">Name</th><th>Minimum Height</th><th>Maximum Height</th><th>Flower Color</th><th>Flower Time</th><th>Soil Texture</th><th style="color:#4e9525">Edit</th></tr>';
+                        }
+                        htmlString = htmlString + '<tr style="text-align:center">';
+                        htmlString = htmlString + '<td>' + '<a class="block-20" style="background-image: url(\'' + results[t].img_link + '\');width:120px;height:120px"></a>'+ '</td>';
+                        htmlString = htmlString + '<td>' + results[t].common_name + '</td>';
+                        htmlString = htmlString + '<td>' + results[t].min_height + '</td>';
+                        htmlString = htmlString + '<td>' + results[t].max_height + '</td>';
+                        htmlString = htmlString + '<td>' + results[t].flower_color + '</td>';
+                        htmlString = htmlString + '<td>' + results[t].flower_time + '</td>';
+                        htmlString = htmlString + '<td>' + results[t].soil_texture + '</td>';
+                        htmlString = htmlString + '<td>' + '<form autocomplete="off" action="/plantCollection?id=' + results[t].common_name +'" method="POST"><input type="submit" value="Delete" class="btn btn-primary" style="font-size:medium;margin-top:5px"></form>' + '</td>';
+                        htmlString = htmlString + '</tr>';
+                    }
+                    htmlString = htmlString + "</table>"
                     res.send(htmlString);
                 });
                 

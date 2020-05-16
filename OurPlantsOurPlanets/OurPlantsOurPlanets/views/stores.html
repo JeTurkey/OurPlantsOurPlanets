@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,7 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+    
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -23,62 +24,7 @@
     <link href="/stylesheets/icomoon.css" rel="stylesheet" />
     <link href="/stylesheets/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
-    <script async="" src="/javascripts/analytics.js"></script>
-    <script src="/javascripts/Chart.min.js"></script>
-    <script src="/javascripts/utils.js"></script>
-    <style>
-
-        canvas {
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-    </style>
-    <style type="text/css">
-        /* Chart.js */
-        @keyframes chartjs-render-animation {
-            from {
-                opacity: .99
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        .chartjs-render-monitor {
-            animation: chartjs-render-animation 1ms
-        }
-
-        .chartjs-size-monitor, .chartjs-size-monitor-expand, .chartjs-size-monitor-shrink {
-            position: absolute;
-            direction: ltr;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            overflow: hidden;
-            pointer-events: none;
-            visibility: hidden;
-            z-index: -1
-        }
-
-            .chartjs-size-monitor-expand > div {
-                position: absolute;
-                width: 1000000px;
-                height: 1000000px;
-                left: 0;
-                top: 0
-            }
-
-            .chartjs-size-monitor-shrink > div {
-                position: absolute;
-                width: 200%;
-                height: 200%;
-                left: 0;
-                top: 0
-            }
-    </style>
+    
 
 </head>
 <body>
@@ -146,3 +92,90 @@
             </div>
         </div>
     </nav>
+
+  
+    <!--Nearby Local Suppliers Map-->
+    <section class="ftco-section" id="suppliers">
+
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-md-10 text-center heading-section">
+                    <span class="subheading">Where to Buy???</span>
+                    <h2 class="mb-4">Garden Suppliers Near You</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-12 ">
+                    <div id="panel"></div>
+
+                    <!-- Map appears here -->
+                    <div id="map"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <!--Local Suppliers Map ends here-->
+    <script src="/javascripts/GoogleMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAg_MlmTxBVeslApFldDbUz-7ssmMD68s&libraries=places&callback=initMap" async defer></script>
+
+
+
+    <div>
+        <div class="grass-footer " style="background-image: url('/images/grass.jpg');height: 150px;">
+        </div>
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://www.ourplantsourplanet.vision"> OurPlantsOurPlanet</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="page-scroll" title="Scroll To Top" onclick="topFunction()">
+        <i class="arrow-up"></i>
+    </div>
+
+    <!-- loader -->
+    <script src="../public/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.easing.1.3.js"></script>
+    <script src="/javascripts/jquery.waypoints.min.js"></script>
+    <script src="/javascripts/jquery.stellar.min.js"></script>
+    <script src="/javascripts/owl.carousel.min.js"></script>
+    <script src="/javascripts/jquery.magnific-popup.min.js"></script>
+    <script src="/javascripts/scrollax.min.js"></script>
+    <!--<script src="/javascripts/google-map.js"></script>-->
+    <script src="/javascripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+
+    <script src="/javascripts/page-scroll.js"></script>
+    <script src="/javascripts/NavBar-active.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+
+</body>
+</html>

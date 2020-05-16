@@ -55,12 +55,12 @@ router.get('/', function (req, res) {
                     }
                     replacement1 = replacement1 + filler + '</span>';
                 }
-                var image = "/images/no-image.jpg";
-                /*if (!results[i].img_link.endsWith(".jpg")) {
+                var image = results[i].img_link;
+                if (!results[i].img_link) {
                     image = "/images/no-image.jpg";
-                }*/
+                }
                 //htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl + '" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';
-                htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><div class="text p-4 float-right d-block" style="text-align:left"><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3><p>';
+                htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block" style="text-align:left"><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3><p>';
                 for (var r = 0; r < 5; r++) {
                     if (results[i].rating >= r + 1) {
                         htmlString = htmlString + '<span class="fa fa-star checked" ></span >';
@@ -152,12 +152,12 @@ router.post('/', urlencodedParser, function (req, res) {
                     }
                     replacement1 = replacement1 + filler + '</span>';
                 }
-                var image = "/images/no-image.jpg";
-                /*if (!results[i].img_link.endsWith(".jpg")) {
+                var image = results[i].img_link;
+                if (!results[i].img_link) {
                     image = "/images/no-image.jpg";
-                }*/
+                }
                 //htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl + '" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';
-                htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><div class="text p-4 float-right d-block" style="text-align:left"><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3><p>';
+                htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block" style="text-align:left"><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3><p>';
                 for (var r = 0; r < 5; r++) {
                     if (results[i].rating >= r + 1) {
                         htmlString = htmlString + '<span class="fa fa-star checked" ></span >';
