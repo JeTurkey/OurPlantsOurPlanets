@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
         res.redirect('/authenticate');
     }
     //res.render('index', { title: path.join(__dirname +'/views/weedIdentifier.cshtml')  });
-    res.sendFile(path.join('D:/home/site/wwwroot' + '/views/calculator.html'));
+    res.sendFile(path.join('D:/home/site/wwwroot' + '/views/calculatorService.html'));
 });
 
 module.exports = router;
