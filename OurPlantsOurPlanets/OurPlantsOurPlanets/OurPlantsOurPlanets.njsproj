@@ -58,6 +58,7 @@
     <Content Include="public\images\mulch-woodchip.jpeg" />
     <Content Include="public\images\shovel-outline.png" />
     <Content Include="public\images\stores.png" />
+    <Content Include="public\images\tools-map.jpeg" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\Calculator.js" />
     <Content Include="public\javascripts\CompostCalculator.js" />
