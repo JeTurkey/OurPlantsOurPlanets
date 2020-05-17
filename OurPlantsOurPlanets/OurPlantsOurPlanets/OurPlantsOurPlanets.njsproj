@@ -44,6 +44,7 @@
     <Content Include="public\images\Compost-background.jpg" />
     <Content Include="public\images\compost-cal.jpeg" />
     <Content Include="public\images\compost-icon.png" />
+    <Content Include="public\images\garden-bg-new.jpg" />
     <Content Include="public\images\garden-suppliers.jpg" />
     <Content Include="public\images\gardening-101.jpeg" />
     <Content Include="public\images\leaf.jpg" />

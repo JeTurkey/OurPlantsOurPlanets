@@ -14710,3 +14710,13 @@ input:focus, button:focus {
     }
 }
 
+
+/*Home page font*/
+#homepage {
+    font-family: "Dosis", sans-serif;
+}
+
+/*homepage down arrow hover*/
+a.scrolldown:hover {
+    color: #fbd341;
+}
