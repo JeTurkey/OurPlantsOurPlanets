@@ -40,10 +40,16 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\community-garden-1140x512-c-center.jpg" />
     <Content Include="public\images\compost.jpg" />
     <Content Include="public\images\garden-hand.jpg" />
+    <Content Include="public\images\horsetail.jpeg" />
+    <Content Include="public\images\love-grass.jpg" />
+    <Content Include="public\images\mexican.jpeg" />
     <Content Include="public\images\mulch.jpg" />
+    <Content Include="public\images\prickly-pear.jpg" />
     <Content Include="public\images\sleeping-weeds.jpg" />
+    <Content Include="public\images\tools-map.jpeg" />
     <Content Include="public\images\tools.jpg" />
     <Content Include="public\images\victoria-guide.jpg" />
     <Content Include="public\images\stores.png" />

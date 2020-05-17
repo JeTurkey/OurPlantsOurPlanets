@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿﻿
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,8 +8,6 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
-
-    
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -24,7 +23,7 @@
     <link href="/stylesheets/icomoon.css" rel="stylesheet" />
     <link href="/stylesheets/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
-    
+
 
 </head>
 <body>
@@ -85,7 +84,23 @@
                             <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/gardenCare/" class="nav-link">Garden Care</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
+
 
 
                 </ul>
@@ -93,7 +108,7 @@
         </div>
     </nav>
 
-  
+
     <!--Nearby Local Suppliers Map-->
     <section class="ftco-section" id="suppliers">
 
@@ -123,6 +138,18 @@
     <script src="/javascripts/GoogleMap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAg_MlmTxBVeslApFldDbUz-7ssmMD68s&libraries=places&callback=initMap" async defer></script>
 
+    <section class="ftco-section col-md-12 justify-content-center">
+        <table>
+            <tr style="background-color:#4e9525;color:white;text-align:center">
+                <td style="padding:10px">Store Name</td>
+                <td>Rating</td>
+                <td>Address</td>
+                <td>Postcode</td>
+            </tr>
+            @RenderTableHere
+        </table>
+        
+    </section>
 
 
     <div>
@@ -130,19 +157,66 @@
         </div>
         <footer class="ftco-footer ftco-bg-dark ftco-section">
             <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="logo"><a href="#">Our Plants <span>Our Planet</span></a></h2>
+                            <p>We are committed towards delivering sustainable solutions that positively impact our people and our planet</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Weed Management</h2>
+
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Identifier</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Encyclopedia</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Control</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Prevention</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Garden Care</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Planner</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Calendar</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Community Gardens</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Our Tools</h2>
+                            <div class="opening-hours">
+
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mulch Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Compost Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Store Locator</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
 
                         <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                             Copyright &copy;
                             <script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://www.ourplantsourplanet.vision"> OurPlantsOurPlanet</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
     <div class="page-scroll" title="Scroll To Top" onclick="topFunction()">
         <i class="arrow-up"></i>
