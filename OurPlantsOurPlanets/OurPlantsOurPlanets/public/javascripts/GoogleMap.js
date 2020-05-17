@@ -30,9 +30,9 @@ function initMap() {
             let marker = new google.maps.Marker({
                 map: map,
                 position: pos,
-                icon: {
-                    url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-                }
+                //icon: {
+                //    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                //}
             });
             infoWindow.setPosition(pos);
             infoWindow.setContent('Your Location');
@@ -71,9 +71,9 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
     let marker = new google.maps.Marker({
         map: map,
         position: pos,
-        icon: {
-            url: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-        }
+        //icon: {
+        //    url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+        //}
     });
     infoWindow.open(map);
     currentInfoWindow = infoWindow;
@@ -108,7 +108,10 @@ function createMarkers(places) {
         let marker = new google.maps.Marker({
             position: place.geometry.location,
             map: map,
-            title: place.name
+            title: place.name,
+            icon: {
+                url: "/images/stores.png",
+            },
         });
 
         /* TODO: Step 4B: Add click listeners to the markers */
@@ -117,7 +120,7 @@ function createMarkers(places) {
             let request = {
                 placeId: place.place_id,
                 fields: ['name', 'formatted_address', 'geometry', 'rating',
-                    'website', 'photos']
+                    'website', 'photos', 'opening_hours', 'business_status']
             };
 
             /* Only fetch the details of a place when the user clicks on a marker.
@@ -187,6 +190,12 @@ function showPanel(placeResult) {
         rating.classList.add('details');
         rating.textContent = `Rating: ${placeResult.rating} \u272e`;
         infoPane.appendChild(rating);
+    }
+    if (placeResult.business_status) {
+        let buss = document.createElement('p');
+        buss.classList.add('details');
+        buss.textContent = `Business Status: ${placeResult.business_status}`;
+        infoPane.appendChild(buss);
     }
     let address = document.createElement('p');
     address.classList.add('details');

@@ -35,14 +35,7 @@
                     <div class="col-md-12 text-center">
                         <a class="navbar-brand col-md-12" href="/">Our Plants<span>Our Planet</span></a>
                     </div>
-                    <!--<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
-                        <form action="#" class="searchform order-lg-last">
-                            <div class="form-group d-flex">
-                                <input type="text" class="form-control pl-3" placeholder="Search">
-                                <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
-                            </div>
-                        </form>
-                    </div>-->
+
                 </div>
             </div>
 
@@ -55,7 +48,6 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#4e9525" />
         </svg>
     </div>-->
-
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled" id="ftco-navbar" style="margin-bottom:0">
         <div class="container-fluid">
@@ -85,7 +77,23 @@
                             <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/gardenCare/" class="nav-link">Garden Care</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
+
 
 
                 </ul>
@@ -106,7 +114,7 @@
     </section>
 
 
- 
+
 
     <!--Weed Control methods-->
     <section class="ftco-section ">
@@ -129,6 +137,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Weeding by Hand</b></h5>
+                                    <p class="read">Reading Time:2 mins 46 secs</p>
                                     <p>Pull when wet! Controlling weeds by hand-pulling may be all that is necessary.</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#guideModel" data-theguide="https://online.anyflip.com/rrfzm/toig/mobile/index.html">
                                         Open Guide
@@ -147,6 +156,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Mulch! Mulch!</b></h5>
+                                    <p class="read">Reading Time:4 mins 24 secs</p>
                                     <p>Keep mulching, but in moderation. Don't give weeds the chance to see the light.</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#mulchModel" data-theguide="https://online.anyflip.com/rrfzm/xixl/mobile/index.html">
                                         Open Guide
@@ -164,6 +174,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Compost 101</b></h5>
+                                    <p class="read">Reading Time:3 mins 01 secs</p>
                                     <p>Dig in! All in one guide you need to start making nature's perfect soil amendement.</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#compostModel" data-theguide="https://online.anyflip.com/rrfzm/weyj/mobile/index.html">
                                         Open Guide
@@ -184,6 +195,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Essential Gardening Tools</b></h5>
+                                    <p class="read">Reading Time:3 mins 56 secs</p>
                                     <p>Must-have gardening tools to power up your garden and get it in shape.</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#toolsModel" data-theguide="https://online.anyflip.com/rrfzm/ajpt/mobile/index.html">
                                         Open Guide
@@ -202,6 +214,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Let Sleeping Weeds Lie</b></h5>
+                                    <p class="read">Reading Time:2 mins 31 secs</p>
                                     <p>Dig only when needed! Kill weeds at their roots but leave the soil and sleeper weed seeds.</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#soilModel" data-theguide="https://online.anyflip.com/rrfzm/vaih/mobile/index.html">
                                         Open Guide
@@ -219,6 +232,7 @@
                                 </div>
                                 <div class="text text-center px-4">
                                     <h5><b>Guidelines for Gardeners</b></h5>
+                                    <p class="read">Reading Time:3 mins 21 secs</p>
                                     <p>Check out what Victorian Government has to say about Gardening</p>
                                     <div class="btn-flip" data-toggle="modal" data-target="#vicModel" data-theguide="https://online.anyflip.com/rrfzm/gtoc/mobile/index.html">
                                         Open Guide
@@ -332,30 +346,6 @@
         <!--Model 6 ends-->
     </section>
     <!--Weed Control ends here-->
-    <!--Nearby Local Suppliers Map-->
-    <section class="ftco-section" id="suppliers">
-
-        <div class="container">
-            <div class="row justify-content-center ">
-                <div class="col-md-10 text-center heading-section">
-                    <span class="subheading">Where to Buy???</span>
-                    <h2 class="mb-4">Garden Suppliers Near You</h2>
-                </div>
-            </div>
-            <div class="row d-flex">
-                <div class="col-md-12 ">
-                    <div id="panel"></div>
-
-                    <!-- Map appears here -->
-                    <div id="map"></div>
-
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
     <!-- Modal -->
     <!--Local Suppliers Map ends here-->
     <script src="/javascripts/GoogleMap.js"></script>
@@ -368,19 +358,66 @@
         </div>
         <footer class="ftco-footer ftco-bg-dark ftco-section">
             <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="logo"><a href="#">Our Plants <span>Our Planet</span></a></h2>
+                            <p>We are committed towards delivering sustainable solutions that positively impact our people and our planet</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Weed Management</h2>
+
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Identifier</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Encyclopedia</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Control</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Prevention</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Garden Care</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Planner</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Calendar</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Community Gardens</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Our Tools</h2>
+                            <div class="opening-hours">
+
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mulch Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Compost Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Store Locator</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
 
                         <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                             Copyright &copy;
                             <script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://www.ourplantsourplanet.vision"> OurPlantsOurPlanet</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
     <div class="page-scroll" title="Scroll To Top" onclick="topFunction()">
         <i class="arrow-up"></i>
