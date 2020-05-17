@@ -338,6 +338,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\prepros-6.config" />
+    <Content Include="views\PreventionTips.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\searchForm.html">
       <SubType>Code</SubType>
     </Content>

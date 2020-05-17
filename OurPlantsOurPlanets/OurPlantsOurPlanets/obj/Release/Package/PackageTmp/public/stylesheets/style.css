@@ -53,6 +53,10 @@ tr:nth-child(odd) {
     background-color: #4e952524;
 }
 
+tr:nth-child(even) {
+    background-color: white;
+}
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
@@ -13474,7 +13478,7 @@ textarea.form-control {
 }
 
     .number:hover {
-        background: #4e9525;
+        
         color:white;
     }
 
@@ -13798,9 +13802,7 @@ p {
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
-    tr:nth-child(even) {
-        background-color: #dddddd;
-    }
+    
 
     article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
         display: block;
@@ -26638,6 +26640,12 @@ p {
                 border: 1px solid transparent;
             }
 
+            .block-27 ul li.hover button, .block-27 ul li.hover span {
+                background: #4e9525;
+                color: #fff;
+                border: 1px solid transparent;
+            }
+
     .wrapper {
         width: 100%;
     }
@@ -27456,3 +27464,97 @@ p {
 }
 
 
+.sticky ul, .sticky li {
+    list-style: none;
+}
+
+.sticky ul {
+    padding: 3em;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+}
+
+    .sticky ul li a {
+        text-decoration: none;
+        color: #000;
+        background: #abe28b8f;
+        display: block;
+        
+        padding: 1em;
+        /*give the notes a shadow*/
+        -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -moz-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        -o-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        /*give the tilt effect to your sticky notes*/
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        /*apply some smooth transition to the sticky note*/
+        -webkit-transition: -webkit-transform .15s linear;
+        -moz-transition: -moz-transform .15s linear;
+        -o-transition: -o-transform .15s linear;
+    }
+
+
+    .sticky ul li:nth-child(even) a {
+        -webkit-transform: rotate(4deg);
+        -moz-transform: rotate(4deg);
+        -o-transform: rotate(4deg);
+        position: relative;
+        top: 5px;
+        background: #abe28b8f;
+    }
+
+    .sticky ul li:nth-child(3n) a {
+        -webkit-transform: rotate(-3deg);
+        -moz-transform: rotate(-3deg);
+        -o-transform: rotate(-3deg);
+        position: relative;
+        top: -5px;
+        background: #abe28b8f;
+    }
+
+    .sticky ul li:nth-child(5n) a {
+        -webkit-transform: rotate(5deg);
+        -moz-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        position: relative;
+        top: -10px;
+        background: #abe28b8f;
+    }
+
+    .sticky ul li a:hover, .sticky ul li a:focus {
+        -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+        -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+        -o-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+        -webkit-transform: scale(1.10);
+        -moz-transform: scale(1.10);
+        -o-transform: scale(1.10);
+        position: relative;
+        z-index: 5;
+        background: #ffc;
+    }
+
+    .sticky ul li {
+        margin: 1em;
+        float: left;
+    }
+
+        .sticky ul li h2 {
+            font-size: 140%;
+            font-weight: bold;
+            padding-bottom: 10px;
+            color: black;
+            text-align: center;
+            font-family: roboto;
+        }
+
+        .sticky ul li p {
+            font-family: "Reenie Beanie", arial, sans-serif;
+            font-size: 18px;
+            color: black;
+            text-align: center;
+            font-family: roboto;
+        }

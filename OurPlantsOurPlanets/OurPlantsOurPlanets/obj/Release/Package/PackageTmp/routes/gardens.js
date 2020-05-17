@@ -23,7 +23,7 @@ router.get('/', function (req, res) {
         res.redirect('/authenticate');
     }
     fs.readFile(path.join('D:/home/site/wwwroot' + '/views/gardens.html'), function (err, data) {
-        var htmlString = data.toString().replace('Say Bye to Weed Worries', 'Community Gardens').replace('<span>Weed Control <', '<span>Community Gardens <');
+        var htmlString = data.toString().replace('Say Bye to Weed Worries', 'Stay Connected').replace('<span>Weed Control <', '<span>Community Gardens <');
         var queryString = "SELECT * from community_garden";
         connection.query(queryString, function (error, results, fields) {
             htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
@@ -47,11 +47,11 @@ router.get('/', function (req, res) {
                 if (results[i].store_name.length <= 83) {
                     var remaining = 91 - results[i].address.length;
                     var filler = ' <span style="color:white;white-space:pre-line">';
-                    for (var k = 0; k < remaining/2; k++) {
-                        filler = filler + "_ ";
+                    for (var k = 0; k < remaining; k++) {
+                        filler = filler + "_";
                     }
-                    if (results[i].address.length <= 40) {
-                        filler = filler+"_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+                    if (results[i].address.length <= 37) {
+                        filler = filler+" _________"
                     }
                     replacement1 = replacement1 + filler + '</span>';
                 }
@@ -87,17 +87,17 @@ router.get('/', function (req, res) {
             }
             htmlString = htmlString + '</div></div></section>';
             if (results.length > 12) {
-                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
+                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container row col-md-12 bg-light" id="collapseThree"><div class="col text-center"><div class="block-27"><ul>';
                 for (var j = 0; j < Math.ceil(results.length / 12); j++) {
                     if (j == 0) {
-                        htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center active"> ';
+                        htmlString = htmlString + '<li class="number justify-content-center align-items-center active" style="margin:10px"> ';
                     } else {
-                        htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center"> ';
+                        htmlString = htmlString + '<li class="number justify-content-center align-items-center" style="margin:10px"> ';
                     }
-                    htmlString = htmlString + '<button style="background-color:Transparent;border:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
-                    htmlString = htmlString + '</button></div>';
+                    htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
+                    htmlString = htmlString + '</button></li>';
                 }
-                htmlString = htmlString + '</div></div></section>';
+                htmlString = htmlString + '</ul></div></div></div></section>';
             }
             htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weedPaginate.js" ></script >';
             fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
@@ -115,16 +115,45 @@ router.post('/', urlencodedParser, function (req, res) {
         res.redirect('/authenticate');
     }
     fs.readFile(path.join('D:/home/site/wwwroot' + '/views/gardens.html'), function (err, data) {
-        var htmlString = data.toString().replace('Say Bye to Weed Worries', 'Community Gardens').replace('<span>Weed Control <', '<span>Community Gardens <');
+        var htmlString = data.toString().replace('Say Bye to Weed Worries', 'Stay Connected').replace('<span>Weed Control <', '<span>Community Gardens <');
         if (req.body.postcode == "Any" || req.body.postcode == "") {
             var queryString = "SELECT * from community_garden";
+            if (req.body.rating != "Any") {
+                if (req.body.rating == "two") {
+                    queryString = queryString +" where rating < 2"
+                }
+                if (req.body.rating == "four") {
+                    queryString = queryString + " where rating < 4 and rating >= 2"
+                }
+                if (req.body.rating == "five") {
+                    queryString = queryString + " where rating < 4 and rating >= 2"
+                }
+            }
         }
         else {
             var queryString = "SELECT * from community_garden where postcode = " + req.body.postcode;
+            if (req.body.rating != "Any") {
+                if (req.body.rating == "two") {
+                    queryString = queryString + " and rating < 2"
+                }
+                if (req.body.rating == "four") {
+                    queryString = queryString + " and rating < 4 and rating >= 2"
+                }
+                if (req.body.rating == "five") {
+                    queryString = queryString + " and rating < 4 and rating >= 2"
+                }
+            }
         }
         connection.query(queryString, function (error, results, fields) {
             htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
             var divNumber = 0;
+        htmlString = htmlString + '<div class="bg-light" style="width:100%;text-align:center;margin-bottom:15px"><div>';
+        if (results.length == 0) {
+            htmlString = htmlString + "<b><i>No Results Found</i></b>";
+        } else {
+            htmlString = htmlString + "<b><i>" + results.length + " results found</i></b>"
+        }
+        htmlString = htmlString + '</div></div>'
             if (error) var name = 'problem';
             for (var i = 0; i < results.length; i++) {
                 if (Math.ceil((i + 1) / 12) > divNumber) {
@@ -144,11 +173,11 @@ router.post('/', urlencodedParser, function (req, res) {
                 if (results[i].store_name.length <= 83) {
                     var remaining = 91 - results[i].address.length;
                     var filler = ' <span style="color:white;white-space:pre-line">';
-                    for (var k = 0; k < remaining / 2; k++) {
-                        filler = filler + "_ ";
+                    for (var k = 0; k < remaining; k++) {
+                        filler = filler + "_";
                     }
-                    if (results[i].address.length <= 40) {
-                        filler = filler + "_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _"
+                    if (results[i].address.length <= 37) {
+                        filler = filler + " ___________"
                     }
                     replacement1 = replacement1 + filler + '</span>';
                 }
@@ -184,17 +213,17 @@ router.post('/', urlencodedParser, function (req, res) {
             }
             htmlString = htmlString + '</div></div></section>';
             if (results.length > 12) {
-                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
+                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container row col-md-12 bg-light" id="collapseThree"><div class="col text-center"><div class="block-27"><ul>';
                 for (var j = 0; j < Math.ceil(results.length / 12); j++) {
                     if (j == 0) {
-                        htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center active"> ';
+                        htmlString = htmlString + '<li class="number justify-content-center align-items-center active" style="margin:10px"> ';
                     } else {
-                        htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center"> ';
+                        htmlString = htmlString + '<li class="number justify-content-center align-items-center" style="margin:10px"> ';
                     }
-                    htmlString = htmlString + '<button style="background-color:Transparent;border:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
-                    htmlString = htmlString + '</button></div>';
+                    htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
+                    htmlString = htmlString + '</button></li>';
                 }
-                htmlString = htmlString + '</div></div></section>';
+                htmlString = htmlString + '</ul></div></div></div></section>';
             }
             htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weedPaginate.js" ></script >';
 
