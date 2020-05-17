@@ -3,6 +3,7 @@ var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
 const path = require('path');
+<<<<<<< HEAD
 var bodyParser = require('body-parser');
 var fs = require('fs');
 var connection = mysql.createConnection({
@@ -13,12 +14,15 @@ var connection = mysql.createConnection({
     database: 'opopdb'
 });
 connection.connect();
+=======
+>>>>>>> 820a77237847b622372b472fe7e972ea699aaaa7
 
 /* GET identifier page. */
 router.get('/', function (req, res) {
     if (!req.session.allowedAccess) {
         res.redirect('/authenticate');
     }
+<<<<<<< HEAD
     fs.readFile(path.join('D:/home/site/wwwroot' + '/views/stores.html'), function (err, data) {
         var queryString = 'SELECT * from garden_supplier';
         var htmlString = "";
@@ -36,6 +40,10 @@ router.get('/', function (req, res) {
     });
     //res.render('index', { title: path.join(__dirname +'/views/weedIdentifier.cshtml')  });
     //res.sendFile(path.join('D:/home/site/wwwroot' + '/views/stores.html'));
+=======
+    //res.render('index', { title: path.join(__dirname +'/views/weedIdentifier.cshtml')  });
+    res.sendFile(path.join('D:/home/site/wwwroot' + '/views/stores.html'));
+>>>>>>> 820a77237847b622372b472fe7e972ea699aaaa7
 });
 
 module.exports = router;

@@ -52,13 +52,34 @@
     <Content Include="public\images\tools-map.jpeg" />
     <Content Include="public\images\tools.jpg" />
     <Content Include="public\images\victoria-guide.jpg" />
+    <Content Include="public\images\comp-video-img.jpeg" />
+    <Content Include="public\images\Compost-background.jpg" />
+    <Content Include="public\images\compost-cal.jpeg" />
+    <Content Include="public\images\compost-icon.png" />
+    <Content Include="public\images\garden-bg-new.jpg" />
+    <Content Include="public\images\garden-suppliers.jpg" />
+    <Content Include="public\images\gardening-101.jpeg" />
+    <Content Include="public\images\leaf.jpg" />
+    <Content Include="public\images\mulch-background.jpg" />
+    <Content Include="public\images\mulch-cal.jpg" />
+    <Content Include="public\images\mulch-cardboard.jpeg" />
+    <Content Include="public\images\mulch-landscape.jpeg" />
+    <Content Include="public\images\mulch-leaves.jpeg" />
+    <Content Include="public\images\mulch-plastic.jpeg" />
+    <Content Include="public\images\mulch-straw.jpeg" />
+    <Content Include="public\images\mulch-top-leaves.png" />
+    <Content Include="public\images\mulch-woodchip.jpeg" />
+    <Content Include="public\images\shovel-outline.png" />
     <Content Include="public\images\stores.png" />
+    <Content Include="public\images\tools-map.jpeg" />
     <Content Include="public\javascripts\.DS_Store" />
     <Content Include="public\javascripts\addToCollection.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="public\javascripts\analytics.js" />
     <Content Include="public\javascripts\Chart.min.js" />
+    <Content Include="public\javascripts\Calculator.js" />
+    <Content Include="public\javascripts\CompostCalculator.js" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
     <Content Include="public\javascripts\polarChart.js">
@@ -256,6 +277,7 @@
     <Content Include="routes\authenticate.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\calculatorService.js" />
     <Content Include="routes\error404.js">
       <SubType>Code</SubType>
     </Content>
@@ -270,6 +292,8 @@
     <Content Include="routes\searchPlants.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\compostCal.js" />
+    <Content Include="routes\mulchCal.js" />
     <Content Include="routes\stores.js" />
     <Content Include="routes\weedDescription.js">
       <SubType>Code</SubType>
@@ -337,6 +361,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="views\compostCal.html" />
     <Content Include="views\Page2.html">
       <SubType>Code</SubType>
     </Content>
@@ -353,10 +378,12 @@
     <Content Include="views\searchPlants.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\mulchCal.html" />
     <Content Include="views\stores.html" />
     <Content Include="views\weedEncyclopedia.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\calculatorService.html" />
     <Content Include="views\weedManagement.html">
       <SubType>Code</SubType>
     </Content>
