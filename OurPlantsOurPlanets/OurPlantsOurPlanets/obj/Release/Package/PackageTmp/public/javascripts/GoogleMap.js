@@ -1,5 +1,4 @@
-﻿
-let pos;
+﻿let pos;
 let map;
 let bounds;
 let infoWindow;

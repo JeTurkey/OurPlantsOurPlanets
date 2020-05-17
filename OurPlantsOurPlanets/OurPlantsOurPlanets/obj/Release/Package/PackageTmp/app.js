@@ -17,15 +17,22 @@ var weedIdentifier = require('./routes/weedIdentifier');
 var weedControl = require('./routes/weedControl');
 var weedManagement = require('./routes/weedManagement');
 var gardenCare = require('./routes/gardenCare');
+var gardens = require('./routes/gardens');
 var weedEncyclopedia = require('./routes/weedEncyclopedia');
 var weedDescription = require('./routes/weedDescription');
 var weedPrevention = require('./routes/weedPrevention');
+var searchPlants = require('./routes/searchPlants');
 var error404 = require('./routes/error404');
+<<<<<<< HEAD
+var plantCollection = require('./routes/plantCollection');
+var stores = require('./routes/stores');
+=======
 var stores = require('./routes/stores');
 var mulchCal = require('./routes/mulchCal');
 var compostCal = require('./routes/compostCal');
 var calculatorService = require('./routes/calculatorService');
 
+>>>>>>> 820a77237847b622372b472fe7e972ea699aaaa7
 var app = express();
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
 
@@ -36,8 +43,10 @@ app.set('view engine', 'html');
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
 
+
 app.use(logger('dev'));
 app.use(bodyParser.json());
+app.use(bodyParser.text({ type: 'text/plain' }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
@@ -47,16 +56,23 @@ app.use('/', routes);
 app.use('/error404', error404);
 app.use('/weedIdentifier', weedIdentifier);
 app.use('/weedControl', weedControl);
-//
+app.use('/plantCollection', plantCollection);
 app.use('/gardenCare', gardenCare);
+app.use('/gardens', gardens);
 app.use('/weedManagement', weedManagement);
 app.use('/weedEncyclopedia', weedEncyclopedia);
 app.use('/weedDescription', weedDescription);
 app.use('/weedPrevention', weedPrevention);
+<<<<<<< HEAD
+app.use('/searchPlants', searchPlants);
+app.use('/stores', stores);
+
+=======
 app.use('/mulchCal', mulchCal);
 app.use('/compostCal', compostCal);
 app.use('/stores', stores);
 app.use('/calculatorService', calculatorService);
+>>>>>>> 820a77237847b622372b472fe7e972ea699aaaa7
 
 
 // catch 404 and forward to error handler

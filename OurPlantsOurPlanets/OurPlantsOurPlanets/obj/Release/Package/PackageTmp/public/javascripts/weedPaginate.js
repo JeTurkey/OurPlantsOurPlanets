@@ -207,4 +207,6 @@ function paginateWeed(val) {
         }
     });
     $("#" + val + "button").parent().addClass('active');
+    $("#" + val + "buttonb").parent().addClass('active');
+    $("#" + val + "buttona").parent().addClass('active');
 }
