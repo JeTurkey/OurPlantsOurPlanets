@@ -1,0 +1,164 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/animate.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet" />
+    <link href="/stylesheets/icofont.css" rel="stylesheet" />
+    <link href="/stylesheets/ionicons.min.css" rel="stylesheet" />
+    <link href="/stylesheets/flaticon.css" rel="stylesheet" />
+    <link href="/stylesheets/icomoon.css" rel="stylesheet" />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
+    <script async="" src="/javascripts/analytics.js"></script>
+    <script src="/javascripts/Chart.min.js"></script>
+    <script src="/javascripts/utils.js"></script>
+    <style>
+
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+    <style type="text/css">
+        /* Chart.js */
+        @keyframes chartjs-render-animation {
+            from {
+                opacity: .99
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .chartjs-render-monitor {
+            animation: chartjs-render-animation 1ms
+        }
+
+        .chartjs-size-monitor, .chartjs-size-monitor-expand, .chartjs-size-monitor-shrink {
+            position: absolute;
+            direction: ltr;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            pointer-events: none;
+            visibility: hidden;
+            z-index: -1
+        }
+
+            .chartjs-size-monitor-expand > div {
+                position: absolute;
+                width: 1000000px;
+                height: 1000000px;
+                left: 0;
+                top: 0
+            }
+
+            .chartjs-size-monitor-shrink > div {
+                position: absolute;
+                width: 200%;
+                height: 200%;
+                left: 0;
+                top: 0
+            }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-12 order-md-last">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="navbar-brand col-md-12" href="/">Our Plants<span>Our Planet</span></a>
+                    </div>
+                    <!--<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control pl-3" placeholder="Search">
+                                <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Preloader
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#4e9525" />
+        </svg>
+    </div>-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled" id="ftco-navbar" style="margin-bottom:0">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class=" = nav-item">
+                        <a href="/" class=" nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Identification</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedIdentifier">Weed Identifier</a>
+                            <a class="dropdown-item " href="/weedEncyclopedia/#a">A-Z Weeds</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="/weedManagement" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Management</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedControl ">Weed Control</a>
+                            <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>

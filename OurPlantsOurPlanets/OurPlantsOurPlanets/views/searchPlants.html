@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/animate.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet" />
+    <link href="/stylesheets/icofont.css" rel="stylesheet" />
+    <link href="/stylesheets/ionicons.min.css" rel="stylesheet" />
+    <link href="/stylesheets/flaticon.css" rel="stylesheet" />
+    <link href="/stylesheets/icomoon.css" rel="stylesheet" />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
+    <style>
+        #overlay {
+            position: fixed;
+            display: none;
+            width: 250px;
+            height: 50px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: 20%;
+            background-color: rgba(1,1,1,0.8);
+            color: white;
+            z-index: 2;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+    </style>
+    <style>
+
+        /*the container must be positioned relative:*/
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+            .autocomplete-items div {
+                padding: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+                /*when hovering an item:*/
+                .autocomplete-items div:hover {
+                    background-color: #e9e9e9;
+                }
+
+        /*when navigating through the items using the arrow keys:*/
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div id="overlay" style="text-align:center;"><div style="padding-top:14px">Plant added to collection</div></div>
+        <div class="row justify-content-between">
+            <div class="col-md-12 order-md-last">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="navbar-brand col-md-12" href="/">Our Plants<span>Our Planet</span></a>
+                    </div>
+                    <!--<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control pl-3" placeholder="Search">
+                                <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Preloader
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#4e9525" />
+        </svg>
+    </div>-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled" id="ftco-navbar" style="margin-bottom:0">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class=" = nav-item">
+                        <a href="/" class=" nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Identification</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedIdentifier">Weed Identifier</a>
+                            <a class="dropdown-item " href="/weedEncyclopedia/#a">A-Z Weeds</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="/weedManagement" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Management</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedControl ">Weed Control</a>
+                            <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/IMG-20200519-WA0002.jpg');" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-end justify-content-center">
+                <div class="col-md-9 pb-5 text-center">
+                    <h1 class="mb-3 bread">Plants 101</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row justify-content-center" style="margin-top:20px">
+        <div class="col-md-10 text-center heading-section">
+            <span class="subheading">Step 1</span>
+            <h2 class="mb-4">Choose Your Plants</h2>
+        </div>
+    </div>
+    <section class="bg-light">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="wrapper justify-content-end">
+                    <div class="no-gutters" style="text-align:right;padding-right:30px;margin-top:10px">
+                        <a href="/plantCollection" class="btn btn-primary" style="font-size:15px">My Collection &gt; </a></div></div>
+                    </div>
+                </div>
+</section>
+                <section class="ftco-section bg-light">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12">
+                                <div class="wrapper">
+                                    <div class="row no-gutters">
+                                        <div class="col-md-12">
+                                            <div class="contact-wrap w-100 p-md-5 p-4 justify-content-center">
+
+                                                <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group autocomplete" style="text-align:left">
+                                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Plant Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group" style="text-align:left">
+                                                                <select name="color" id="name" class="form-control">
+                                                                    <option value="Any">Color</option>
+                                                                    <option value="White">White</option>
+                                                                    <option value="Pink">Pink</option>
+                                                                    <option value="Purple">Purple</option>
+                                                                    <option value="Plum">Plum</option>
+                                                                    <option value="Ivory">Ivory</option>
+                                                                    <option value="Red">Red</option>
+                                                                    <option value="Yellow">Yellow</option>
+                                                                    <option value="Black">Black</option>
+                                                                    <option value="Cream">Cream</option>
+                                                                    <option value="Orange">Orange</option>
+                                                                    <option value="Brown">Brown</option>
+                                                                    <option value="Green">Green</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group" style="text-align:left">
+                                                                <select class="form-control" name="height" id="email">
+                                                                    <option value="Any">Height</option>
+                                                                    <option value="Short">Short</option>
+                                                                    <option value="Medium">Medium</option>
+                                                                    <option value="Tall">Tall</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group" style="text-align:left">
+                                                                <select class="form-control" name="season" id="email">
+                                                                    <option value="Any">Season</option>
+                                                                    <option value="All">All Seasons</option>
+                                                                    <option value="Spring">Spring</option>
+                                                                    <option value="Summer">Summer</option>
+                                                                    <option value="Autumn">Autumn</option>
+                                                                    <option value="Winter">Winter</option>
+                                                                    <option value="Fall">Fall</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2">
+                                                            <div class="form-group" style="text-align:left">
+                                                                <select class="form-control" name="texture" id="email">
+                                                                    <option value="Any">Texture</option>
+                                                                    <option value="Sa">Sandy</option>
+                                                                    <option value="Lo">Loamy</option>
+                                                                    <option value="Cl">Clay</option>
+                                                                    <option value="Li">Silty</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1">
+                                                            <div class="form-group" style="text-align:left">
+                                                                <input type="submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
+                                                                <div class="submitting"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
