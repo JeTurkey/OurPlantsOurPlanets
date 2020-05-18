@@ -26,7 +26,7 @@ $(document).ready(function () {
     $("#february").hide();
     $("#march").hide();
     $("#april").hide();
-    $("#mays").show();
+    $("#may1").show();
     $("#june").hide();
     $("#july").hide();
     $("#august").hide();
@@ -87,7 +87,7 @@ $("#apr").click(function () {
 
 $("#may").click(function () {
     $(".month-content:visible").hide();
-    $("#mays").show();
+    $("#may1").show();
     $(".months").each(function () {
         if ($(this).hasClass("active")) {
             $(this).removeClass("active");
