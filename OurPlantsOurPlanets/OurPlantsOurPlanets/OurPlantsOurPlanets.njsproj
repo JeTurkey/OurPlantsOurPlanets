@@ -40,6 +40,18 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="public\images\community-garden-1140x512-c-center.jpg" />
+    <Content Include="public\images\compost.jpg" />
+    <Content Include="public\images\garden-hand.jpg" />
+    <Content Include="public\images\horsetail.jpeg" />
+    <Content Include="public\images\love-grass.jpg" />
+    <Content Include="public\images\mexican.jpeg" />
+    <Content Include="public\images\mulch.jpg" />
+    <Content Include="public\images\prickly-pear.jpg" />
+    <Content Include="public\images\sleeping-weeds.jpg" />
+    <Content Include="public\images\tools-map.jpeg" />
+    <Content Include="public\images\tools.jpg" />
+    <Content Include="public\images\victoria-guide.jpg" />
     <Content Include="public\images\comp-video-img.jpeg" />
     <Content Include="public\images\Compost-background.jpg" />
     <Content Include="public\images\compost-cal.jpeg" />
@@ -61,10 +73,19 @@
     <Content Include="public\images\stores.png" />
     <Content Include="public\images\tools-map.jpeg" />
     <Content Include="public\javascripts\.DS_Store" />
+    <Content Include="public\javascripts\addToCollection.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\analytics.js" />
+    <Content Include="public\javascripts\Chart.min.js" />
     <Content Include="public\javascripts\Calculator.js" />
     <Content Include="public\javascripts\CompostCalculator.js" />
     <Content Include="public\javascripts\GoogleMap.js" />
     <Content Include="public\javascripts\GoogleMaps.js" />
+    <Content Include="public\javascripts\polarChart.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\javascripts\utils.js" />
     <Content Include="public\PDF\Garden Care Guide - Yearly.pdf" />
     <Content Include="public\stylesheets\flaticon.css" />
     <Content Include="public\fonts\flaticon\.DS_Store" />
@@ -263,7 +284,14 @@
     <Content Include="routes\gardenCare.js">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="routes\gardens.js" />
     <Content Include="routes\index.js" />
+    <Content Include="routes\plantCollection.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\searchPlants.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="routes\compostCal.js" />
     <Content Include="routes\mulchCal.js" />
     <Content Include="routes\stores.js" />
@@ -298,6 +326,7 @@
     <Content Include="views\gardenCare.html">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="views\gardens.html" />
     <Content Include="views\header1.html">
       <SubType>Code</SubType>
     </Content>
@@ -340,7 +369,13 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\prepros-6.config" />
+    <Content Include="views\PreventionTips.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\searchForm.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="views\searchPlants.html">
       <SubType>Code</SubType>
     </Content>
     <Content Include="views\mulchCal.html" />

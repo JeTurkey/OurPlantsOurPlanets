@@ -89,19 +89,19 @@ router.post('/search', urlencodedParser, function (req, res) {
                     }
                     var replacement = results[i].basic_description;
                     if (results[i].basic_description.length < 105) {
-                        var remaining = 105 - results[i].basic_description.length;
+                        var remaining = 95 - results[i].basic_description.length;
                         var filler = ' <span style="color:white;white-space:pre-line">';
                         for (var k = 0; k < remaining/2; k++) {
                             filler = filler + "_ ";
                         }
                         replacement = replacement + filler + '</span>';
                     }
-                    if (results[i].basic_description.toString().length > 113) {
-                        replacement = results[i].basic_description.substring(0, 113) + '...';
+                    if (results[i].basic_description.toString().length > 95) {
+                        replacement = results[i].basic_description.substring(0, 95) + '...';
                     }
                     var idUrl = results[i].common_name;
                     var image = results[i].img_link;
-                    if (!results[i].img_link.endsWith(".jpg")) {
+                    if (!results[i].img_link || results[i].img_link=="" ) {
                         image = "/images/no-image.jpg";
                     }
                     htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl +'" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';
@@ -111,17 +111,17 @@ router.post('/search', urlencodedParser, function (req, res) {
                 }
                 htmlString = htmlString + '</div></div></section>';
                 if (results.length > 12) {
-                    htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
+                    htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container row col-md-12 bg-light" id="collapseThree"><div class="col text-center"><div class="block-27"><ul>';
                     for (var j = 0; j < Math.ceil(results.length / 12); j++) {
                         if (j == 0) {
-                            htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center active"> ';
+                            htmlString = htmlString + '<li class="number justify-content-center align-items-center active" style="margin:10px"> ';
                         } else {
-                            htmlString = htmlString + '<div class="number d-flex justify-content-center align-items-center"> ';
+                            htmlString = htmlString + '<li class="number justify-content-center align-items-center" style="margin:10px"> ';
                         }
-                        htmlString = htmlString + '<button style="background-color:Transparent;border:none" class="number-name" value="' + (j+1) + '" id="' + (j+1) + 'button" onClick="paginateWeed(this.value)" >'+(j+1);
-                        htmlString = htmlString + '</button></div>';
+                        htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
+                        htmlString = htmlString + '</button></li>';
                     }
-                    htmlString = htmlString + '</div></div></section>';
+                    htmlString = htmlString + '</ul></div></div></div></section>';
                 }
             });
             htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weedPaginate.js" ></script >';
