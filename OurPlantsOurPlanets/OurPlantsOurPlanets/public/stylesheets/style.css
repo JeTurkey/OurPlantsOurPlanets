@@ -13730,7 +13730,6 @@ p {
     margin-left: 70px;
     width: fit-content;
     margin: auto;
-    box-shadow: 0px 3px #ccc
 }
 
 
@@ -14278,24 +14277,6 @@ p {
         }
     }
 
-<<<<<<< HEAD
-.mulch-result h5 {
-    font-family: "Poppins", Arial, sans-serif;
-    font-size:20px;
-}
-
-.comp-result p {
-    font-size: 14px;
-    font-style: italic;
-}
-
-
-.mulch-result strong {
-    font-family: "Poppins", Arial, sans-serif;
-    color: #4e9525;
-    font-size: 22px;
-}
-=======
     @media (min-width: 992px) {
         .container {
             max-width: 960px;
@@ -14307,7 +14288,6 @@ p {
             max-width: 1140px;
         }
     }
->>>>>>> master
 
     .container-fluid {
         width: 100%;
@@ -14388,18 +14368,6 @@ p {
         max-width: 25%;
     }
 
-<<<<<<< HEAD
-.comp-result h5 {
-    font-family: "Poppins", Arial, sans-serif;
-    font-size:20px;
-}
-
-.comp-result strong {
-    font-family: "Poppins", Arial, sans-serif;
-    color: #4e9525;
-    font-size: 22px;
-}
-=======
     .col-4 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 33.33333%;
@@ -14413,7 +14381,6 @@ p {
         flex: 0 0 41.66667%;
         max-width: 41.66667%;
     }
->>>>>>> master
 
     .col-6 {
         -webkit-box-flex: 0;
@@ -27655,20 +27622,3 @@ a.scrolldown:hover {
     color: #fbd341;
 }
 
-<<<<<<< HEAD
-/*nav bar header text*/
-.slider-text .bread {
-    font-weight: 700 !important;
-    padding-bottom: 150px;
-}
-
-/*Weed control buttons*/
-.btn-flip {
-   
-    padding: 5px;
-    border-radius: 3px;
-    margin-left: 70px;    
-    box-shadow: 0px 3px #ccc
-}
-=======
->>>>>>> master
