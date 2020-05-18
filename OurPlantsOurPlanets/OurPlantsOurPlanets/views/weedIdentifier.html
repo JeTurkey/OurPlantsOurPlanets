@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -23,6 +22,63 @@
     <link href="/stylesheets/icomoon.css" rel="stylesheet" />
     <link href="/stylesheets/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
+    <style>
+        /*the container must be positioned relative:*/
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+            .autocomplete-items div {
+                padding: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+                /*when hovering an item:*/
+                .autocomplete-items div:hover {
+                    background-color: #e9e9e9;
+                }
+
+        /*when navigating through the items using the arrow keys:*/
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+    <style>
+        .scientific-name {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            color: #4e9525;
+        }
+
+        .identity {
+            width: 75%;
+        }
+
+        /*fidentifier cards alignment input mobile view*/
+        @media (max-width: 812px) {
+            .identity {
+                width: 100%;
+            }
+        }
+    </style>
 
 </head>
 <body>
@@ -71,7 +127,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Identification</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item active" href="/weedIdentifier">Weed Identifier</a>
+                            <a class="dropdown-item" href="/weedIdentifier">Weed Identifier</a>
                             <a class="dropdown-item " href="/weedEncyclopedia/#a">A-Z Weeds</a>
                         </div>
                     </li>
@@ -83,9 +139,22 @@
                             <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="/gardenCare/" class="nav-link">Garden Care</a></li>
-
-
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -97,12 +166,19 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 pb-5 text-center">
-                    <h1 class="mb-3 bread">Weed Identifier</h1>
-                    <p class="breadcrumbs"><span class="mr-2"><a href="/">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Weed Identifier <i class="ion-ios-arrow-forward"></i></span></p>
+                    <h1 class="mb-3 bread" style="font-size:40px">The "Roots" to Your Garden Problems</h1>
                 </div>
             </div>
         </div>
     </section>
+    <div class="container" style="margin-top:20px;margin-bottom:15px">
+        <div class="row justify-content-center ">
+            <div class="col-md-10 text-center heading-section">
+                <span class="subheading">Odd One Out!</span>
+                <h2 class="mb-4">Weed Identifier</h2>
+            </div>
+        </div>
+    </div>
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="row justify-content-center">
@@ -112,10 +188,10 @@
                             <div class="col-md-12">
                                 <div class="contact-wrap w-100 p-md-5 p-4">
                                     <h1 class="mb-4">Search Weed</h1>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm" action="weedIdentifier/search" style="text-align:center">
+                                    <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" action="weedIdentifier/search" style="text-align:center">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group" style="text-align:left">
+                                                <div class="form-group autocomplete" style="text-align:left">
                                                     <label class="label" for="subject">Weed Name</label>
                                                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Weed Name">
                                                 </div>
@@ -157,9 +233,9 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="form-group" style="text-align:left">
+                                                <div class="form-group autocomplete" style="text-align:left">
                                                     <label class="label" for="postcode">Postcode</label>
-                                                    <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Any" maxlength="4">
+                                                    <input type="text" class="form-control autocomplete" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Any" maxlength="4">
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -180,92 +256,203 @@
         </div>
     </section>
 
-   
 
-    <section class="ftco-section">
-        <div class="container">
-            <div class="row justify-content-center mb-5 ftco-animate">
+
+    <section class="ftco-section" id="services-area">
+        <div class="container ">
+            <div class="row justify-content-center mb-2">
                 <div class="col-md-10 text-center heading-section">
-                    <span class="subheading">Tips &amp; Techniques</span>
-                    <h2 class="mb-4">Seasonal Lawn Care Tips</h2>
+                    <span class="subheading">Beware!</span>
+                    <h2 class="mb-4">Most Common Garden Weeds</h2>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="carousel-seasonal owl-carousel ftco-owl">
-                        <div class="item">
-                            <div class="wrap">
-                                <div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(/images/seasonal-1.jpg);">
-                                </div>
-                                <div class="text text-center px-4">
-                                    <h3><a href="#">Spring</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
+
+
+                <div class="mexicanfg bg-light" style="padding:20px">
+                    <div class="container ">
+                        <div class="row">
+                            <div class="col-lg-7" style="text-align:justify; padding:10px;">
+                                <img src="/images/love-grass.jpg" class="identity">
                             </div>
-                        </div>
-                        <div class="item">
-                            <div class="wrap">
-                                <div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(/images/seasonal-2.jpg);">
-                                </div>
-                                <div class="text text-center px-4">
-                                    <h3><a href="#">Summer</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="wrap">
-                                <div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(/images/seasonal-3.jpg);">
-                                </div>
-                                <div class="text text-center px-4">
-                                    <h3><a href="#">Winter</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="wrap">
-                                <div class="seasonal img d-flex align-items-center justify-content-center" style="background-image: url(/images/seasonal-4.jpg);">
-                                </div>
-                                <div class="text text-center px-4">
-                                    <h3><a href="#">Fall</a></h3>
-                                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                </div>
+                            <div class="col-lg-5" style="text-align:justify; padding:10px">
+                                <h4 style="text-align:center">African Lovegrass</h4>
+                                <p class="scientific-name">(Eragrostis Curvula)</p>
+                                <p style="font-size:16px; padding-left:10px;">
+                                    Native to Southern Africa, the African lovegrass is a vigorous, drought resistant, densely tufted perennial grass that grows to 1.2m with slender, weeping, blue-green to dark green, often in-rolled leaves. The fine seed head is leaden grey and initially long and narrow but opens widely with age.
+
+                                </p>
+
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="africangrs" style="padding:20px">
+                    <div class="container ">
+                        <div class="row">
+
+                            <div class="col-lg-7 " style="text-align:justify; padding:10px;">
+                                <h4 style="text-align:center">Horsetail</h4>
+                                <p class="scientific-name">(Equisetum Arvense)</p>
+                                <p style="font-size:16px; padding-left:10px;">
+                                    These are very primitive plants belonging to the genus Equisetum, vascular plants that reproduce by spores in a similar fashion to ferns. These are amongst the list of 28 non-native plants that threaten biodiversity and cause other environ- mental damage. These plants are incredibly invasive, and it's tough to eradicate.
+                                </p>
+
+                            </div>
+                            <div class="col-lg-5" style="text-align:justify; padding:10px">
+                                <img src="/images/horsetail.jpeg" style="width:100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prickly bg-light" style="padding:20px">
+                    <div class="container  ">
+                        <div class="row">
+                            <div class="col-lg-7" style="text-align:justify; padding:10px;">
+                                <img src="/images/prickly-pear.jpg" class="identity">
+                            </div>
+                            <div class="col-lg-5" style="text-align:justify; padding:10px">
+                                <h4 style="text-align:center">Prickly Pear</h4>
+                                <p class="scientific-name">(Eragrostis Curvula)</p>
+                                <p style="font-size:16px; padding-left:10px;">
+                                    Thick infestations of the prickly pear may impede the growth and regeneration of native vegetation. Native to the Americas, prickly pear is a spiny, drought-resistant succulent that rapidly invades pastures and natural areas and overwhelms other vegetation.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horsetail" style="padding:20px">
+                    <div class="container ">
+                        <div class="row">
+
+                            <div class="col-lg-7 " style="text-align:justify; padding:10px;">
+                                <h4 style="text-align:center">Mexican Feather Grass </h4>
+                                <p class="scientific-name">(Nassella tenuissima)</p>
+                                <p style="font-size:16px; padding-left:10px;">
+                                    Native to North America and South America, These weeds are densely tufted perennial tussock grass. These have been described by weed experts as 'A potential disaster for the Australian environment'. Mexican feather grass which otherwise have been found in rural lands has recently been found growing in private gardens.
+
+                                </p>
+
+                            </div>
+                            <div class="col-lg-5" style="text-align:justify; padding:10px">
+                                <img src="/images/mexican.jpeg" style="width:100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    
+
 
 
 
     <div>
         <div class="grass-footer " style="background-image: url('/images/grass.jpg');height: 150px;">
         </div>
+
         <footer class="ftco-footer ftco-bg-dark ftco-section">
             <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="logo"><a href="#">Our Plants <span>Our Planet</span></a></h2>
+                            <p>We are committed towards delivering sustainable solutions that positively impact our people and our planet</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Weed Management</h2>
+
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Identifier</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Encyclopedia</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Control</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Prevention</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Garden Care</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Planner</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Calendar</a></li>
+                                <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Community Gardens</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Our Tools</h2>
+                            <div class="opening-hours">
+
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mulch Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Compost Calculator</a></li>
+                                    <li><a href="#" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Store Locator</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12 text-center">
 
                         <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                             Copyright &copy;
                             <script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://www.ourplantsourplanet.vision"> OurPlantsOurPlanet</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
     <div class="page-scroll" title="Scroll To Top" onclick="topFunction()">
         <i class="arrow-up"></i>
-    </div>
 
+        <!-- loader -->
+
+        <script src="/javascripts/popper.min.js"></script>
+        <script src="/javascripts/bootstrap.min.js"></script>
+        <script src="/javascripts/jquery.easing.1.3.js"></script>
+        <script src="/javascripts/jquery.waypoints.min.js"></script>
+        <script src="/javascripts/jquery.stellar.min.js"></script>
+        <script src="/javascripts/owl.carousel.min.js"></script>
+        <script src="/javascripts/jquery.magnific-popup.min.js"></script>
+        <script src="/javascripts/scrollax.min.js"></script>
+
+        <script src="/javascripts/google-map.js"></script>
+        <script src="/javascripts/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+
+        <script src="/javascripts/page-scroll.js"></script>
+
+        <script src="/javascripts/page-scroll.js"></script>
+        <script src="/javascripts/NavBar-active.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-23581568-13');
+        </script>
     <!-- loader -->
 
     <script src="/javascripts/popper.min.js"></script>
@@ -276,12 +463,12 @@
     <script src="/javascripts/owl.carousel.min.js"></script>
     <script src="/javascripts/jquery.magnific-popup.min.js"></script>
     <script src="/javascripts/scrollax.min.js"></script>
-     <script src="/javascripts/google-map.js"></script>
+    <script src="/javascripts/google-map.js"></script>
     <script src="/javascripts/main.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
 
     <script src="/javascripts/page-scroll.js"></script>
-  
+
     <script src="/javascripts/page-scroll.js"></script>
     <script src="/javascripts/NavBar-active.js"></script>
 

@@ -27,8 +27,9 @@ router.get('/', function (req, res) {
             htmlString = htmlString + data.toString();
             htmlString = htmlString.replace("&#65279", "");
             fs.readFile(path.join('D:/home/site/wwwroot' + '/views/weedEncyclopedia.html'), function (err, data) {
-                htmlString = htmlString + data.toString().substr(1).replace("Weed Encyclopaedia", "Weed Prevention").replace("Weed Control", "Weed Prevention");
-                htmlString = htmlString + '<section id="care-area" class="ftco-section"><div class="container"><div class="row justify-content-center mb-5" > <div class="col-md-10 text-center heading-section" ><span class="heading-section h1">Weed Growth Predictions</span></div></div>';
+                htmlString = htmlString + data.toString().substr(1).replace("Weed Encyclopaedia", "Be proactive, and Stay Ahead of Weeds").replace("Weed Control", "Weed Prevention");
+                htmlString = htmlString + '<section id="care-area" class="ftco-section"><div class="container"><div class="row justify-content-center mb-5" > <div class="col-md-10 text-center heading-section" ><span class="subheading" style="width:100%;text-align:center"> Weed Prevention </span><h2 class="mb-4">Weed Growth Predictions</span></div></div>';
+                htmlString = htmlString + "<p style=\"font-weight:600;text-align:center\">" + "Prevention is better than cure! Help prevent weeds from germinating throughout the year near your locality. The best way to manage weeds is to prevent them from becoming established in the first place, check our weed predictor to help you through the coming months!"+"</p>";
                 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "Spetember", "October", "November", "December"];
                 var queryString = 'SELECT weed.common_name, img_link,basic_description,month from weed join germination on weed.common_name=germination.common_name where month = "' + months[new Date().getMonth()] + '"';
                 connection.query(queryString, function (error, results, fields) {
@@ -44,7 +45,7 @@ router.get('/', function (req, res) {
                             } else {
                                 htmlString = htmlString + '<li class="number  justify-content-center align-items-center" style="margin:10px;margin-bottom:20px"> ';
                             }
-                            htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
+                            htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'buttonb" onClick="paginateWeed(this.value)" >' + (j + 1);
                             htmlString = htmlString + '</button></li>';
                         }
                         htmlString = htmlString + '</ul></div></div></div>';
@@ -84,7 +85,7 @@ router.get('/', function (req, res) {
                             } else {
                                 htmlString = htmlString + '<li class="number  justify-content-center align-items-center" style="margin:10px;margin-bottom:20px"> ';
                             }
-                            htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'button" onClick="paginateWeed(this.value)" >' + (j + 1);
+                            htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + '" id="' + (j + 1) + 'buttona" onClick="paginateWeed(this.value)" >' + (j + 1);
                             htmlString = htmlString + '</button></li>';
                         }
                         htmlString = htmlString + '</ul></div></div></div>';
@@ -102,7 +103,7 @@ router.get('/', function (req, res) {
                                 } else {
                                     htmlString = htmlString + '<li class="number  justify-content-center align-items-center" style="margin:10px;margin-bottom:20px"> ';
                                 }
-                                htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + 'n" id="' + (j + 1) + 'nbutton" onClick="paginateWeed(this.value)" >' + (j + 1);
+                                htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + 'n" id="' + (j + 1) + 'nbuttonb" onClick="paginateWeed(this.value)" >' + (j + 1);
                                 htmlString = htmlString + '</button></li>';
                             }
                             htmlString = htmlString + '</ul></div></div></div>';
@@ -195,12 +196,12 @@ router.get('/', function (req, res) {
                                     } else {
                                         htmlString = htmlString + '<li class="number justify-content-center align-items-center" style="margin:10px"> ';
                                     }
-                                    htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + 'nn" id="' + (j + 1) + 'nnbutton" onClick="paginateWeed(this.value)" >' + (j + 1);
+                                    htmlString = htmlString + '<button style="background-color:Transparent;border:none;outline:none" class="number-name" value="' + (j + 1) + 'nn" id="' + (j + 1) + 'nnbuttonb" onClick="paginateWeed(this.value)" >' + (j + 1);
                                     htmlString = htmlString + '</button></li>';
                                 }
                                 htmlString = htmlString + '</ul></div></div></div></div></section></section>';
                             }
-                            fs.readFile(path.join('D:/home/site/wwwroot' + '/views/HowWeHelpSection.html'), function (err, data) {
+                            fs.readFile(path.join('D:/home/site/wwwroot' + '/views/PreventionTips.html'), function (err, data) {
                                 htmlString = htmlString + data.toString();
                                 htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weedPaginate.js" ></script >';
                                 fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
