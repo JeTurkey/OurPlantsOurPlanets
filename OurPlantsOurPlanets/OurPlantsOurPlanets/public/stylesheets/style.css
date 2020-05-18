@@ -13656,7 +13656,7 @@ h7 {
 }
 
 .open {
-    width: 250px;
+    width: inherit;
 }
 
 /* Styling for place details */
@@ -14002,7 +14002,7 @@ h7 {
 }
 
 .open {
-    width: 250px;
+    width: inherit;
 }
 
 /* Styling for place details */
