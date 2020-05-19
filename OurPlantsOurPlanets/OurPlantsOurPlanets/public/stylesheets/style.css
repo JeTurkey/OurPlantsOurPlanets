@@ -11727,6 +11727,7 @@ h1, h2, h3, h4, h5,
 
 .slider-text .bread {
     font-weight: 700 !important;
+    padding-bottom:200px;
 }
 
 .owl-carousel {
@@ -25397,6 +25398,8 @@ p {
 
     .slider-text .bread {
         font-weight: 700 !important;
+        padding-bottom:200px;
+
     }
 
     .owl-carousel {
