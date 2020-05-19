@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
             if (!mLength || !mWidth || !mThick) {
                 $('.mulch-result').html('<p class="alert">Please fill in all dimensions.');
             } else if (!$.isNumeric(mLength) || !$.isNumeric(mWidth) || !$.isNumeric(mThick)) {
-                $('.mulch-result').html('<p class="alert">Only numeric dimensions are allowed.');
+                $('.mulch-result').html('<p class="alert">Only numeric dimensions are allowed. (Max limit = 3 digits)');
             } else if ((mLength <= 0) || (mWidth <= 0) || (mThick <= 0)) {
                 $('.mulch-result').html('<p class="alert">Dimensions must not be negative or zero.');
             } else {
@@ -113,7 +113,7 @@ jQuery(document).ready(function ($) {
             if (!mDiam || !mThick) {
                 $('.mulch-result').html('<p class="alert">Please fill in all dimensions.');
             } else if (!$.isNumeric(mDiam) || !$.isNumeric(mThick)) {
-                $('.mulch-result').html('<p class="alert">Only numeric dimensions are allowed.');
+                $('.mulch-result').html('<p class="alert">Only numeric dimensions are allowed. (Max limit = 3 digits)');
             } else if ((mDiam <= 0) || (mThick <= 0)) {
                 $('.mulch-result').html('<p class="alert">Dimensions must not be negative or zero.');
             } else {
