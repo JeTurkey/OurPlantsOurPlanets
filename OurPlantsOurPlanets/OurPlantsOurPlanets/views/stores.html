@@ -137,46 +137,48 @@
     <!--Local Suppliers Map ends here-->
     <script src="/javascripts/GoogleMap.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAg_MlmTxBVeslApFldDbUz-7ssmMD68s&libraries=places&callback=initMap" async defer></script>
-    <div class="row justify-content-center" style="margin-top:20px">
-        <div class="col-md-10 text-center heading-section">
-            <span class="subheading">Providers of your gardening Tools</span>
-            <h2 class="mb-4">Stores Near You</h2>
+    <div class=" container">
+           <div class="row justify-content-center" style="margin-top:20px">
+            <div class="col-md-10 text-center heading-section">
+                <span class="subheading">Providers of your gardening Tools</span>
+                <h2 class="mb-4">Stores Near You</h2>
+            </div>
         </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-12">
-            <div class="wrapper">
-                <div class="row no-gutters">
-                    <div class="col-md-12">
-                        <div class="contact-wrap" style="margin-top:20px">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="contact-wrap" style="margin-top:20px">
 
-                            <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
-                                <div class="row justify-content-center">
-
+                                <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
+                                    <div class="row justify-content-center">
 
 
-                                    <div class="col-md-4" style="padding-bottom:0px">
-                                        <div class="form-group autocomplete" style="text-align:left">
-                                            <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Enter Postcode" maxlength="4">
+
+                                        <div class="col-md-4" style="padding-bottom:0px">
+                                            <div class="form-group autocomplete" style="text-align:left">
+                                                <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Enter Postcode" maxlength="4">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" style="text-align:left">
+                                                <select class="form-control" name="rating" id="email">
+                                                    <option value="Any">Rating</option>
+                                                    <option value="two">&lt;2</option>
+                                                    <option value="four">&ge;2 and &lt;4</option>
+                                                    <option value="five">&ge;4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="form-group" style="text-align:left">
+                                                <input type="Submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group" style="text-align:left">
-                                            <select class="form-control" name="rating" id="email">
-                                                <option value="Any">Rating</option>
-                                                <option value="two">&lt;2</option>
-                                                <option value="four">&ge;2 and &lt;4</option>
-                                                <option value="five">&ge;4</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-1">
-                                        <div class="form-group" style="text-align:left">
-                                            <input type="Submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
