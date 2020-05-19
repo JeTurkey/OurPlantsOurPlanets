@@ -107,7 +107,7 @@ router.get('/', function (req, res) {
                     for (var t = 0; t < results.length; t++) {
                         if (t == 0) {
                             htmlString = htmlString + '<section class="ftco-section"><div class="col-md-12 heading-section" style="text-align:center;margin-top:60px;margin-bottom:15px"><span class="subheading" style="width:100%;text-align:center"> Your Plants </span><h2 class="mb-4" style="width:100%;text-align:center">Plants in Your Collection</h2></div></section><section class="ftco-section">';
-                            htmlString = htmlString + '<table class="container col-md12" style="width:100%; border:1px solid #4e9525">';
+                            htmlString = htmlString + '<table class="container col-md12 table-responsive-sm" style="width:100%; border:1px solid #4e9525">';
                             htmlString = htmlString + '<tr style="background-color:#4e9525;color:white;text-align:center"><th>Image</th><th style="padding:10px">Name</th><th>Minimum Height</th><th>Maximum Height</th><th>Flower Color</th><th>Flower Time</th><th>Soil Texture</th><th style="color:#4e9525">Edit</th></tr>';
                         }
                         htmlString = htmlString + '<tr style="text-align:center">';

@@ -37,7 +37,7 @@ router.get('/', function (req, res) {
              for (var i = 0; i < results.length; i++) {
                 if (Math.ceil((i + 1) / 12) > divNumber) {
                     divNumber = divNumber + 1;
-                    htmlString = htmlString + '<div style="display:none" class="number-content" id="' + Math.ceil((i + 1) / 12) + '">';
+                    htmlString = htmlString + '<div style="display:none" class="number-content col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 12) + '">';
                  }
                  var plantName = results[i].common_name;
                  if (plantName.length <= 33) {

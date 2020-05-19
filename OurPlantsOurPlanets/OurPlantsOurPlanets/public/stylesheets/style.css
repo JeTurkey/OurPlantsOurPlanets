@@ -27634,3 +27634,6 @@ a.scrolldown:hover {
     color: #fbd341;
 }
 
+.btn.btn-primary {
+    font-size: 16px !important;
+}
