@@ -11727,6 +11727,7 @@ h1, h2, h3, h4, h5,
 
 .slider-text .bread {
     font-weight: 700 !important;
+    padding-bottom:200px;
 }
 
 .owl-carousel {
@@ -13656,7 +13657,7 @@ h7 {
 }
 
 .open {
-    width: 250px;
+    width: inherit;
 }
 
 /* Styling for place details */
@@ -14002,7 +14003,7 @@ h7 {
 }
 
 .open {
-    width: 250px;
+    width: inherit;
 }
 
 /* Styling for place details */
@@ -14071,12 +14072,13 @@ p {
     background-color: #4e9525;
     padding: 5px;
     color: white;
-    border-radius: 20px;
+    border-radius: 3px;
     margin-left: 70px;
     width: fit-content;
     margin: auto;
-    box-shadow: 0px 3px #ccc;
+    box-shadow: 0px 3px #ccc
 }
+
 
 
     .btn-flip:hover {
@@ -25396,6 +25398,8 @@ p {
 
     .slider-text .bread {
         font-weight: 700 !important;
+        padding-bottom:200px;
+
     }
 
     .owl-carousel {
@@ -27079,9 +27083,10 @@ label {
 
 .mulch-result h5 {
     font-family: "Poppins", Arial, sans-serif;
+    font-size: 20px;
 }
 
-.comp-result p {
+.mulch-result p {
     font-size: 14px;
     font-style: italic;
 }
@@ -27140,7 +27145,14 @@ label {
 
 .comp-result h5 {
     font-family: "Poppins", Arial, sans-serif;
+    font-size: 20px;
 }
+
+.comp-result p {
+    font-size: 14px;
+    font-style: italic;
+}
+
 
 .comp-result strong {
     font-family: "Poppins", Arial, sans-serif;
@@ -27622,3 +27634,61 @@ a.scrolldown:hover {
     color: #fbd341;
 }
 
+.btn.btn-primary {
+    font-size: 16px !important;
+}
+
+/*Home page font*/
+#homepage {
+    font-family: Georgia, serif;
+}
+
+/*Homepage button*/
+#home-button {
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: Georgia, serif;
+    color: white;
+    background-color: #4e9525;
+}
+
+#home-button:hover{
+    color: #4e9525;
+    background-color: #fbd341;
+}
+
+.slider-text .bread {
+    font-family: Georgia, serif;
+}
+
+.mulch-result h5 {
+    font-family: 'open sans', arial, sans-serif;
+}
+
+.comp-result h5 {
+    font-family: 'open sans', arial, sans-serif;
+}
+
+table {
+    font-family: "open sans", arial, sans-serif;
+    color:black;
+}
+
+.services-wrap {
+    font-family: "open sans", arial, sans-serif;
+}
+
+.place, p {
+    color:black;
+}
+
+#ControlMethods li {
+    font-family: "open sans", arial, sans-serif;
+    color: black;
+}
+
+#chart-area {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+}

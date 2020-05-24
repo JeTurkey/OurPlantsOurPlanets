@@ -42,6 +42,7 @@
     <Content Include="public\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="public\images\community-garden-1140x512-c-center.jpg" />
     <Content Include="public\images\compost.jpg" />
+    <Content Include="public\images\encyclopedia.jpeg" />
     <Content Include="public\images\garden-hand.jpg" />
     <Content Include="public\images\horsetail.jpeg" />
     <Content Include="public\images\IMG-20200516-WA0007.jpg" />
@@ -52,6 +53,7 @@
     <Content Include="public\images\love-grass.jpg" />
     <Content Include="public\images\mexican.jpeg" />
     <Content Include="public\images\mulch.jpg" />
+    <Content Include="public\images\prevent.jpeg" />
     <Content Include="public\images\prickly-pear.jpg" />
     <Content Include="public\images\sleeping-weeds.jpg" />
     <Content Include="public\images\tools-map.jpeg" />

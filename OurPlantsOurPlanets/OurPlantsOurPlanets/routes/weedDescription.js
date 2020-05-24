@@ -83,7 +83,7 @@ router.get('/', function (req, res) {
                         htmlString = htmlString + "</div>";
                         
                         var impactLevels = [0, 0, 0, 0, 0];
-                        htmlString = htmlString + '<table style="width:80%;margin-left:10%;margin-right:10%;border:1px solid grey;border-collapse:collapse"><tr><th style="border:1px solid grey;padding:5px">Impact Type</th><th style="border:1px solid grey;padding:5px">Impact Description</th><th style="border:1px solid grey;padding:5px">Impact Level</th></tr>';
+                        htmlString = htmlString + '<table style="width:80%;margin-left:10%;margin-right:10%;border:1px solid grey;border-collapse:collapse"><tr style="background-color:#4e9525;color:white;text-align:center"><th style="border:1px solid grey;padding:5px">Impact Type</th><th style="border:1px solid grey;padding:5px">Impact Description</th><th style="border:1px solid grey;padding:5px">Impact Level</th></tr>';
                         for (var i = 0; i < results.length; i++) {
                             if (results[i].impact_level != "") {
                                 htmlString = htmlString + '<tr><td style="border:1px solid grey;padding:5px">' + results[i].impact_type + '</td><td style="border:1px solid grey;padding:5px">' + results[i].impact_description + '</td><td style="border:1px solid grey;padding:5px">' + results[i].impact_level + '</td></tr>';
@@ -94,7 +94,7 @@ router.get('/', function (req, res) {
 
                         htmlString = htmlString + '</table>';
                         htmlString = htmlString + '<div class="row justify-content-center" style="width:100%">';
-                        htmlString = htmlString + '<div style="margin-top:8px"><h4>*Impact Levels</h4><p style="font-size:13px">0:Negligible | 1:Low | 2:Low-Medium | 3:Medium | 4:Medium High | 5:High</p></div>';
+                        htmlString = htmlString + '<div style="margin-top:8px"><p style="font-style:italic;color:#4e9525">Impact Levels: 0:Negligible | 1:Low | 2:Low-Medium | 3:Medium | 4:Medium High | 5:High</p></div>';
                         htmlString = htmlString + "</div>";
                         htmlString = htmlString + '</div ></section > ';
                         

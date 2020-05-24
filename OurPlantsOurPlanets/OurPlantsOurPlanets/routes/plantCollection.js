@@ -44,8 +44,8 @@ router.get('/', function (req, res) {
                 }
                 var queryString = 'SELECT * from native_flora where common_name in (' + list + ');';
                 connection.query(queryString, function (error, results, fields) {
-                    htmlString = htmlString + '<section class="ftco-section"><div class="col-md-12 heading-section" style="text-align:center;margin-top:10px;margin-bottom:10px"><span class="subheading" style="width:100%;text-align:center"> Design Ideas </span><h2 class="mb-4" style="width:100%;text-align:center">Plant Combinations</h2></div></section>';
-                    htmlString = htmlString + '<section class="ftco-section"><div class="container col-md-12" id="collapseOne"><div class="row d-flex col-md-8 justify-content-center align-items-center" style="">';
+                    htmlString = htmlString + '<section class="ftco-section"><div class="col-md-12 heading-section" style="text-align:center;margin-top:10px;margin-bottom:10px"><span class="subheading" style="width:100%;text-align:center"> Step 2 </span><h2 class="mb-4" style="width:100%;text-align:center">Design Ideas</h2></div></section>';
+                    htmlString = htmlString + '<section class="ftco-section container"><div class="row" id="collapseOne"><div class="row d-flex col-md-8 justify-content-center align-items-center" style="">';
                     var maxheight = 0;
                     var minheight = 1000;
                     var color = ['Pink', 'White', 'Purple', 'Plum', 'Ivory', 'Red', 'Yellow', 'Black', 'Cream', 'Orange', 'Brown', 'Green'];
@@ -107,7 +107,7 @@ router.get('/', function (req, res) {
                     for (var t = 0; t < results.length; t++) {
                         if (t == 0) {
                             htmlString = htmlString + '<section class="ftco-section"><div class="col-md-12 heading-section" style="text-align:center;margin-top:60px;margin-bottom:15px"><span class="subheading" style="width:100%;text-align:center"> Your Plants </span><h2 class="mb-4" style="width:100%;text-align:center">Plants in Your Collection</h2></div></section><section class="ftco-section">';
-                            htmlString = htmlString + '<table class="container col-md12" style="width:100%; border:1px solid #4e9525">';
+                            htmlString = htmlString + '<table class="container col-md12 table-responsive-sm" style="width:100%; border:1px solid #4e9525">';
                             htmlString = htmlString + '<tr style="background-color:#4e9525;color:white;text-align:center"><th>Image</th><th style="padding:10px">Name</th><th>Minimum Height</th><th>Maximum Height</th><th>Flower Color</th><th>Flower Time</th><th>Soil Texture</th><th style="color:#4e9525">Edit</th></tr>';
                         }
                         htmlString = htmlString + '<tr style="text-align:center">';
