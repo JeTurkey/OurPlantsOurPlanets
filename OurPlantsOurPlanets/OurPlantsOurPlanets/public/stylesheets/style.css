@@ -27671,6 +27671,7 @@ a.scrolldown:hover {
 
 table {
     font-family: "open sans", arial, sans-serif;
+    color:black;
 }
 
 .services-wrap {
@@ -27678,5 +27679,16 @@ table {
 }
 
 .place, p {
-    color:black
+    color:black;
+}
+
+#ControlMethods li {
+    font-family: "open sans", arial, sans-serif;
+    color: black;
+}
+
+#chart-area {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 }
