@@ -28,7 +28,7 @@ router.get('/', function (req, res) {
             for (var i = 0; i < results.length; i++) {
                 if (Math.ceil((i + 1) / 12) > divNumber) {
                     divNumber = divNumber + 1;
-                    htmlString = htmlString + '<table style="display:none" class="number-content col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 12) + '"><tr style="background-color:#4e9525;color:white;text-align:center"><td style="padding:10px">Store Name</td><td>Rating</td><td>Address</td><td style="padding:10px">Postcode</td></tr>';
+                    htmlString = htmlString + '<table style="display:none;border:solid;border-color:#4e9525" class="number-content col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 12) + '"><tr style="background-color:#4e9525;color:white;text-align:center"><td style="padding:10px">Store Name</td><td>Rating</td><td>Address</td><td style="padding:10px">Postcode</td></tr>';
                 }
                 htmlString = htmlString + '<tr style="text-align:center">';
                 htmlString = htmlString + '<td style="padding:10px">' + results[i].store_name + '</td>';

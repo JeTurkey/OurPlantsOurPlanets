@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
 
-    
+  
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -28,6 +28,7 @@
         .blog-entry .one {
             width: 100%;
         }
+
         .blog-entry span.day {
             font-size: 20px;
             font-weight: 300;
@@ -35,16 +36,12 @@
             line-height: 1;
             font-family: sans-serif;
         }
+
         .pr-1, .px-1 {
             padding-right: 1rem !important;
         }
-
-                 
-
-       
-
     </style>
-    
+
 
 </head>
 <body>
@@ -158,19 +155,19 @@
                                     <div class="row main">
                                         <h5 class="measurements">Enter the measurements</h5>
                                         <div class="row mulch-length-row hidden">
-                                            <label for="mulch-length ">Length (m.)</label>
+                                            <label for="mulch-length " data-toggle="tooltip" title="Enter your garden length in meters.">Length (m.)</label>
                                             <input type="text" id="mulch-length" class="mulch-length" name="mulch-length" size="2" maxlength="3" value="" />
                                         </div>
                                         <div class="row mulch-width-row hidden">
-                                            <label for="mulch-width">Width (m.)</label>
+                                            <label for="mulch-width" data-toggle="tooltip" title="Enter your garden width in meters.">Width (m.)</label>
                                             <input type="text" id="mulch-width" class="mulch-width" name="mulch-width" size="2" maxlength="3" value="" />
                                         </div>
                                         <div class="row mulch-diam-row hidden">
-                                            <label for="mulch-diam">Diameter (m.)</label>
+                                            <label for="mulch-diam" data-toggle="tooltip" title="Enter your garden diameter in meters.">Diameter (m.)</label>
                                             <input type="text" id="mulch-diam" class="mulch-diam" name="mulch-diam" size="2" maxlength="3" value="" />
                                         </div>
                                         <div class="row mulch-thick-row hidden">
-                                            <label for="mulch-thick">Thickness (cm.)</label>
+                                            <label for="mulch-thick" data-toggle="tooltip" title="Enter the mulch thickness needed in centimeters">Thickness (cm.)</label>
                                             <input type="text" id="mulch-thick" class="mulch-thick" name="mulch-thick" size="2" maxlength="3" value="" />
                                         </div>
                                     </div>
@@ -443,11 +440,12 @@
 
     <script src="/javascripts/page-scroll.js"></script>
     <script src="/javascripts/NavBar-active.js"></script>
-
-
     <script src="/javascripts/Calculator.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 

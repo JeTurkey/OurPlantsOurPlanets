@@ -27637,3 +27637,46 @@ a.scrolldown:hover {
 .btn.btn-primary {
     font-size: 16px !important;
 }
+
+/*Home page font*/
+#homepage {
+    font-family: Georgia, serif;
+}
+
+/*Homepage button*/
+#home-button {
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: Georgia, serif;
+    color: white;
+    background-color: #4e9525;
+}
+
+#home-button:hover{
+    color: #4e9525;
+    background-color: #fbd341;
+}
+
+.slider-text .bread {
+    font-family: Georgia, serif;
+}
+
+.mulch-result h5 {
+    font-family: 'open sans', arial, sans-serif;
+}
+
+.comp-result h5 {
+    font-family: 'open sans', arial, sans-serif;
+}
+
+table {
+    font-family: "open sans", arial, sans-serif;
+}
+
+.services-wrap {
+    font-family: "open sans", arial, sans-serif;
+}
+
+.place, p {
+    color:black;
+}
