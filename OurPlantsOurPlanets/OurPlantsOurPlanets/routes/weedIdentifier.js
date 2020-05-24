@@ -79,13 +79,13 @@ router.post('/search', urlencodedParser, function (req, res) {
                     htmlString = htmlString + "<b><i>" + results.length + " results found</i></b>"
                 }
                 htmlString = htmlString + '</div></div>'
-                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
+                htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex justify-content-center">';
                 var divNumber = 0;
                 if (error) var name = 'problem';
                 for (var i = 0; i < results.length; i++) {
                     if (Math.ceil((i + 1) / 12) > divNumber) {
                         divNumber = divNumber + 1;
-                        htmlString = htmlString + '<div style="display:none" class="number-content" id="' + Math.ceil((i + 1) / 12) + '">';
+                        htmlString = htmlString + '<div style="display:none" class="number-content row col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 12) + '">';
                     }
                     var replacement = results[i].basic_description;
                     if (results[i].basic_description.length < 105) {

@@ -50,12 +50,12 @@ router.get('/', function (req, res) {
                         }
                         htmlString = htmlString + '</ul></div></div></div>';
                     }
-                    htmlString = htmlString + '<div class="container" id="collapseOne"><div class="row d-flex">';
+                    htmlString = htmlString + '<div class="container" id="collapseOne"><div class="row d-flex justify-content-center">';
 
                     for (var i = 0; i < results.length; i++) {
                         if (Math.ceil((i + 1) / 6) > divNumber) {
                             divNumber = divNumber + 1;
-                            htmlString = htmlString + '<div style="display:none" class="number-content" id="' + Math.ceil((i + 1) / 6) + '">';
+                            htmlString = htmlString + '<div style="display:none" class="number-content row col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 6) + '">';
                         }
                         var replacement = results[i].common_name;
                         var filler = ' <span style="color:white">';
@@ -111,7 +111,7 @@ router.get('/', function (req, res) {
                         for (var i = 0; i < results.length; i++) {
                             if (Math.ceil((i + 1) / 6) > divNumber) {
                                 divNumber = divNumber + 1;
-                                htmlString = htmlString + '<div style="display:none" class="number-content1" id="' + Math.ceil((i + 1) / 6) + 'n">';
+                                htmlString = htmlString + '<div style="display:none" class="number-content1 row col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 6) + 'n">';
                             }
                             var replacement = results[i].common_name;
                             var filler = ' <span style="color:white">';
@@ -161,12 +161,12 @@ router.get('/', function (req, res) {
                                 }
                                 htmlString = htmlString + '</ul></div></div></div>';
                             }
-                            htmlString = htmlString + '<div class="container collapse" id="collapseThree"><div class="row d-flex">';
+                            htmlString = htmlString + '<div class="container collapse" id="collapseThree"><div class="row d-flex justify-content-center">';
                             var divNumber = 0;
                             for (var i = 0; i < results.length; i++) {
                                 if (Math.ceil((i + 1) / 6) > divNumber) {
                                     divNumber = divNumber + 1;
-                                    htmlString = htmlString + '<div style="display:none" class="number-content2" id="' + Math.ceil((i + 1) / 6) + 'nn">';
+                                    htmlString = htmlString + '<div style="display:none" class="number-content2 row col-md-12 col-sm-12" id="' + Math.ceil((i + 1) / 6) + 'nn">';
                                 }
                                 var replacement = results[i].common_name;
 
