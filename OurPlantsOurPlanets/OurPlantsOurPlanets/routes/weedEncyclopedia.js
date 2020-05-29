@@ -79,7 +79,7 @@ router.get('/', function (req, res) {
                             replacement = results[i].basic_description.substring(0, 113)+'...';
                         }
                         var idUrl = results[i].common_name;
-                        var image = results[i].img_link;
+                        var image = '/images/weeds/' + results[i].common_name.split(' ').join('_') + '.jpg';
                         if (!results[i].img_link.endsWith(".jpg")) {
                             image = "/images/no-image.jpg";
                         }

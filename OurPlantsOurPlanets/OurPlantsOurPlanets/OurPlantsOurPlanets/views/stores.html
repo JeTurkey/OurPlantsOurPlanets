@@ -1,0 +1,452 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="/stylesheets/animate.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="/stylesheets/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="/stylesheets/magnific-popup.css" rel="stylesheet" />
+    <link href="/stylesheets/icofont.css" rel="stylesheet" />
+    <link href="/stylesheets/ionicons.min.css" rel="stylesheet" />
+    <link href="/stylesheets/flaticon.css" rel="stylesheet" />
+    <link href="/stylesheets/icomoon.css" rel="stylesheet" />
+    <link href="/stylesheets/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
+    <style>
+
+        /*the container must be positioned relative:*/
+        .autocomplete {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            /*position the autocomplete items to be the same width as the container:*/
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+            .autocomplete-items div {
+                padding: 10px;
+                cursor: pointer;
+                background-color: #fff;
+                border-bottom: 1px solid #d4d4d4;
+            }
+
+                /*when hovering an item:*/
+                .autocomplete-items div:hover {
+                    background-color: #e9e9e9;
+                }
+
+        /*when navigating through the items using the arrow keys:*/
+        .autocomplete-active {
+            background-color: DodgerBlue !important;
+            color: #ffffff;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-12 order-md-last">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="navbar-brand col-md-12" href="/">Our Plants<span>Our Planet</span></a>
+                    </div>
+                    <!--<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+                        <form action="#" class="searchform order-lg-last">
+                            <div class="form-group d-flex">
+                                <input type="text" class="form-control pl-3" placeholder="Search">
+                                <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </div>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Preloader
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px">
+            <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+            <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#4e9525" />
+        </svg>
+    </div>-->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light scrolled" id="ftco-navbar" style="margin-bottom:0">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class=" = nav-item">
+                        <a href="/" class=" nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Identification</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedIdentifier">Weed Identifier</a>
+                            <a class="dropdown-item " href="/weedEncyclopedia/#a">A-Z Weeds</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="/weedManagement" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Weed Management</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/weedControl ">Weed Control</a>
+                            <a class="dropdown-item " href="/weedPrevention">Weed Prevention</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/gardenCare" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Garden Care</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/searchPlants">Garden Planner</a>
+                            <a class="dropdown-item " href="/gardenCare">Garden Calendar</a>
+                            <a class="dropdown-item " href="/gardens">Community Gardens</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="/mulchCal" class="nav-link dropdown-toggle" id="dropdown04" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tools</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04" style="width:fit-content">
+                            <a class="dropdown-item" href="/mulchCal">Mulch Calculator</a>
+                            <a class="dropdown-item " href="/compostCal">Compost Calculator</a>
+                            <a class="dropdown-item " href="/stores">Store Locator</a>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Nearby Local Suppliers Map-->
+    <section class="ftco-section" id="suppliers">
+
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-md-10 text-center heading-section">
+                    <span class="subheading">Where to Buy?</span>
+                    <h2 class="mb-4">Garden Suppliers Near You</h2>
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="col-md-12 ">
+                    <div id="panel"></div>
+
+                    <!-- Map appears here -->
+                    <div id="map"></div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Modal -->
+    <!--Local Suppliers Map ends here-->
+    <script src="/javascripts/GoogleMap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAg_MlmTxBVeslApFldDbUz-7ssmMD68s&libraries=places&callback=initMap" async defer></script>
+    <div class=" container">
+        <div class="row justify-content-center" style="margin-top:20px">
+            <div class="col-md-10 text-center heading-section">
+                <span class="subheading">Providers of your gardening Tools</span>
+                <h2 class="mb-4">Stores Near You</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="contact-wrap" style="margin-top:20px">
+
+                                <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
+                                    <div class="row justify-content-center">
+
+
+
+                                        <div class="col-md-4" style="padding-bottom:0px">
+                                            <div class="form-group autocomplete" style="text-align:left">
+                                                <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Enter Postcode (e.g. 3145)" maxlength="4">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group" style="text-align:left">
+                                                <select class="form-control" name="rating" id="email">
+                                                    <option value="Any">Rating</option>
+                                                    <option value="two">&lt;2</option>
+                                                    <option value="four">&ge;2 and &lt;4</option>
+                                                    <option value="five">&ge;4</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <div class="form-group" style="text-align:left">
+                                                <input type="Submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+
+                @RenderTableHere
+
+            </div>
+        </div>
+    </section>
+
+
+    <div>
+        <div class="grass-footer " style="background-image: url('/images/grass.jpg');height: 150px;">
+        </div>
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="logo"><a href="/">Our Plants <span>Our Planet</span></a></h2>
+                            <p>We are committed towards delivering sustainable solutions that positively impact our people and our planet</p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5">
+                            <h2 class="ftco-heading-2">Weed Management</h2>
+
+                            <ul class="list-unstyled">
+                                <li><a href="/weedIdentifier" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Identifier</a></li>
+                                <li><a href="/weedEncyclopedia/#a" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Encyclopedia</a></li>
+                                <li><a href="/weedControl" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Control</a></li>
+                                <li><a href="/weedPrevention" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Weed Prevention</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Garden Care</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="/searchPlants" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Planner</a></li>
+                                <li><a href="/gardenCare/" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Garden Calendar</a></li>
+                                <li><a href="/gardens" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Community Gardens</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg">
+                        <div class="ftco-footer-widget mb-4 ml-md-5" ">
+                            <h2 class="ftco-heading-2">Our Tools</h2>
+                            <div class="opening-hours">
+
+                                <ul class="list-unstyled">
+                                    <li><a href="/mulchCal" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Mulch Calculator</a></li>
+                                    <li><a href="/compostCal" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Compost Calculator</a></li>
+                                    <li><a href="/stores" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Store Locator</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <p>
+
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved |<a href="https://www.ourplantsourplanet.vision"> OurPlantsOurPlanet</a>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <div class="page-scroll" title="Scroll To Top" onclick="topFunction()">
+        <i class="arrow-up"></i>
+    </div>
+
+    <!-- loader -->
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/javascripts/popper.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/jquery.easing.1.3.js"></script>
+    <script src="/javascripts/jquery.waypoints.min.js"></script>
+    <script src="/javascripts/jquery.stellar.min.js"></script>
+    <script src="/javascripts/owl.carousel.min.js"></script>
+    <script src="/javascripts/jquery.magnific-popup.min.js"></script>
+    <script src="/javascripts/scrollax.min.js"></script>
+    <!--<script src="/javascripts/google-map.js"></script>-->
+    <script src="/javascripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.5.0/js/bootstrap4-toggle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="/javascripts/page-scroll.js"></script>
+    <script src="/javascripts/NavBar-active.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+    <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                var total = 0;
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                        total = total + 1;
+                        if (total == 10) break;
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed,prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+
+        //var all = "african boxthorn,african daisy,african feather grass,african lovegrass,alligator weed,amsinckia,angled onion,apple of sodom,artichoke thistle,azolla,bathurst burr,bindweed,blackberry,boneseed,branched broomrape,bridal creeper,buffalo burr,caltrop,camel thorn,cape broom,cape tulip one leaf,cape tulip two leaf,chilean cestrum,chilean needle grass,devils claw purple flower,devils claw yellow flower,dodder,english broom,fireweed,flax leaved broom,golden thistle,gorse,great mullein,hardheads,hawkweed,hemlock,hoary cress,horehound,horestails,illyrian thistle,karoo and giraffe thorn,khaki weed,knotweed,mesquite,mexican feather grass,noogoora burr,pampas lily of the valley,parthenium weed,patersons curse,perennial thistle,poverty weed,prairie ground cherry,prickly pear drooping,prickly pear erect,ragwort,saffron thistle,salvinia,scotch thistle,serrated tussock,silverleaf nightshade,skeleton weed,slender thistles,soldier thistle,spiny broom,spiny burr grass,spiny emex,st barnabys thistle,st john's wort,star thistle,stemless thistle,sweet briar,tangled hypericum,thorn apple recurved,water hyacinth,wheel cactus,wild garlic,wild watsonia";
+        var allPostcodes = "3147,3127,3123,3102,3192,3016,3170,3058,3074,3976,3106,3201,3109,3135,3195,3752,3033,3169,3057,3173,3152,3070,3076,3023,3809,3765,3062,3977,3134,3911,3156,3083,3029,3912,3105,3153,3095,3933,3099,3783,3802,3138,3071,3941,3216,3025,3030,3078,3144";
+        var postcodes = allPostcodes.split(",");
+        /*An array containing all the country names in the world:*/
+        //var countries = all.split(",");
+
+        /*initiate the autocomplete function on the "myInput" element,and pass along the countries array as possible autocomplete values:*/
+        //autocomplete(document.getElementById("subject"),countries);
+        autocomplete(document.getElementById("postcode"), postcodes);
+    </script>
+
+
+</body>
+</html>
