@@ -102,7 +102,7 @@ router.get('/', function (req, res) {
                 htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end">' +
                     '<a href="'+website+'" class="block-20" style="background-image: url(\'' + image + '\');"></a >' +
                     '<div class="text p-4 float-right d-block" style="text-align:left">' +
-                    '<a href="'+website+'"><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3></a><p>';
+                    '<a href="'+website+'" target= "_blank" ><h3 class="heading mb-0" style="color:black;">' + replacement + '</h3></a><p>';
 
                 //for loop to generate rating in terms of stars
                 //rating is rounded in order to generate half stars

@@ -55,7 +55,7 @@ router.get('/', function (req, res) {
             if (!req.session.acookie) {
                 htmlString = htmlString + '<section class="ftco-section">' +
                     '<div class="col-md-12 heading-section" style="text-align:center;margin-top:10px;margin-bottom:10px">' +
-                    '<p>There are currently no plants in your collection. Please add more plants to expore plant combinations!</p>' +
+                    '<p>There are currently no plants in your collection. Go back to step 1 and add more plants to explore plant combinations!</p>' +
                     '</div></section>';
                 //renders footer and sends final response
                 fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
