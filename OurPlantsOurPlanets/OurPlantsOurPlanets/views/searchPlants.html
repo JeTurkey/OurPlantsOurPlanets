@@ -203,12 +203,12 @@
                                         <div class="row">
                                             <div class="col-md-3">
                                                 <div class="form-group autocomplete" style="text-align:left">
-                                                    <input type="text" class="form-control" name="subject" id="names" placeholder="Plant Name">
+                                                    <input type="text" class="form-control" name="subject" id="names" placeholder="Enter a plant name">
                                                 </div>
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group" style="text-align:left">
-                                                    <select name="color" id="name" class="form-control">
+                                                    <select name="color" id="name" class="form-control" data-toggle="tooltip" title="Select the flower colour">
                                                         <option value="Any">Color</option>
                                                         <option value="White">White</option>
                                                         <option value="Pink">Pink</option>
@@ -227,7 +227,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group" style="text-align:left">
-                                                    <select class="form-control" name="height" id="email">
+                                                    <select class="form-control" name="height" id="email" data-toggle="tooltip" title="Select the plant height">
                                                         <option value="Any">Height</option>
                                                         <option value="Short">Short</option>
                                                         <option value="Medium">Medium</option>
@@ -237,7 +237,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group" style="text-align:left">
-                                                    <select class="form-control" name="season" id="email">
+                                                    <select class="form-control" name="season" id="email" data-toggle="tooltip" title="Select the flowering season">
                                                         <option value="Any">Season</option>
                                                         <option value="All">All Seasons</option>
                                                         <option value="Spring">Spring</option>
@@ -250,7 +250,7 @@
                                             </div>
                                             <div class="col-md-2">
                                                 <div class="form-group" style="text-align:left">
-                                                    <select class="form-control" name="texture" id="email">
+                                                    <select class="form-control" name="texture" id="email" data-toggle="tooltip" title="Select your soil texture">
                                                         <option value="Any">Texture</option>
                                                         <option value="Sa">Sandy</option>
                                                         <option value="Lo">Loamy</option>
@@ -385,4 +385,15 @@
         /*initiate the autocomplete function on the "myInput" element,and pass along the countries array as possible autocomplete values:*/
         //autocomplete(document.getElementById("subject"),countries);
         autocomplete(document.getElementById("names"), postcodes);
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+
+            $('[data-toggle="tooltip"]').click(function () {
+                $('[data-toggle="tooltip"]').tooltip("hide");
+
+            });
+        });
+
     </script>
