@@ -108,11 +108,13 @@
 
             <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
                 <div class="col-md-12 ftco-animate" style="padding-top:60px">
-                    <h2 style=" font-family: Georgia, serif;font-style:oblique; color: white; text-align:center; font-size:30px;" id="homepage">Say Goodbye To Your Weed Worries</h2>
-                    <br />
-                    <h2 class="subheading" style="font-size:28px; text-align:center; text-transform: capitalize;" id="homepage"> Your Pathway To</h2>
-                    <h1 style="text-align:center; margin-bottom:30px; font-size:55px" id="homepage">A Beautiful Garden</h1>
-                    <p style="text-align:center"><a href="#care-area" class=" btn-primary mr-md-4 py-2 px-4" id="home-button">Starts Now!</a></p>
+                    <div class="container" id="home-overlay">
+                        <h2 style=" font-family: Georgia, serif;font-style:oblique; color: white; text-align:center; font-size:30px;" id="homepage">Say Goodbye To Your Weed Worries</h2>
+                        <br />
+                        <h2 class="subheading" style="font-size:28px; text-align:center; text-transform: capitalize;" id="homepage"> Your Pathway To</h2>
+                        <h1 id="homepage-title">A Beautiful Garden</h1>
+                        <p style="text-align:center"><a href="#care-area" class=" btn-primary mr-md-4 py-2 px-4" id="home-button">Starts Now!</a></p>
+                    </div>
                 </div>
             </div>
             <div class="page-down">
@@ -130,7 +132,7 @@
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-md-10 text-center heading-section ftco-animate">
-                    <span class="subheading">It's your Plant, It's your Planet</span>
+                    <span class="subheading">Being Weed Wise</span>
                     <h2 class="mb-4">Did You Know?</h2>
                 </div>
             </div>
@@ -195,7 +197,7 @@
             <div class="row justify-content-center mb-2">
                 <div class="col-md-10 text-center heading-section ftco-animate">
                     <span class="subheading">Let your Garden Breathe</span>
-                    <h2 class="mb-4">How We Help</h2>
+                    <h2 class="mb-4">How We Help?</h2>
                 </div>
             </div>
             <div class="row">
@@ -274,7 +276,7 @@
             <div class="row d-flex">
                 <div class="col-md-6 d-flex">
                     <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image: url('/images/about.jpg');">
-                        <a href="https://www.youtube.com/watch?v=N4Bx_zwUloo" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+                        <a href="https://www.youtube.com/watch?v=N4Bx_zwUloo" class="icon-video popup-vimeo d-flex justify-content-center align-items-center" data-toggle="tooltip" title="Click to know more about garden weeds.">
                             <span class="icon-play"></span>
                         </a>
                     </div>
@@ -418,9 +420,16 @@
 
     <script src="/javascripts/page-scroll.js"></script>
     <script src="/javascripts/NavBar-active.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+   
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }

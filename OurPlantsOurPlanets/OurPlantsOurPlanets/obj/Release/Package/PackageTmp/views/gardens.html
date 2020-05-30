@@ -3,11 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -22,8 +23,10 @@
     <link href="/stylesheets/flaticon.css" rel="stylesheet" />
     <link href="/stylesheets/icomoon.css" rel="stylesheet" />
     <link href="/stylesheets/style.css" rel="stylesheet" />
+
     <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
     <style>
         .checked {
             color: orange;
@@ -46,6 +49,7 @@
         ::placeholder {
             color: black;
         }
+
         .autocomplete {
             position: relative;
             display: inline-block;
@@ -82,7 +86,7 @@
             color: #ffffff;
         }
     </style>
-    
+
 </head>
 <body>
     <div class="container">
@@ -184,7 +188,7 @@
                         <h2 class="mb-4">Community Gardens</h2>
                     </div>
                     <p style="font-weight:600;text-align:center">
-                        With hundreds of community gardens in Victoria, there is likely to be one near you. Get a chance to meet fellow gardeners and experience a greater sense of connectedness with your local community through shared activities and pleasures of gardening! Use our search tool to find your local community garden.
+                        With hundreds of community gardens in Victoria,there is likely to be one near you. Get a chance to meet fellow gardeners and experience a greater sense of connectedness with your local community through shared activities and pleasures of gardening! Use our search tool to find your local community garden.
                     </p>
                 </div>
                 <br />
@@ -202,7 +206,7 @@
 
                                                 <div class="col-md-4" style="padding-bottom:0px">
                                                     <div class="form-group autocomplete" style="text-align:left">
-                                                        <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Enter Postcode" maxlength="4">
+                                                        <input type="text" class="form-control" name="postcode" id="postcode" pattern="[0-9]{4}" placeholder="Enter Postcode (e.g. 3145)" maxlength="4">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
@@ -231,37 +235,37 @@
             </div>
 </section>
     <script>
-        function autocomplete(inp, arr) {
+        function autocomplete(inp,arr) {
             /*the autocomplete function takes two arguments,
             the text field element and an array of possible autocompleted values:*/
             var currentFocus;
             /*execute a function when someone writes in the text field:*/
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
+            inp.addEventListener("input",function (e) {
+                var a,b,i,val = this.value;
                 /*close any already open lists of autocompleted values*/
                 closeAllLists();
                 if (!val) { return false; }
                 currentFocus = -1;
                 /*create a DIV element that will contain the items (values):*/
                 a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
+                a.setAttribute("id",this.id + "autocomplete-list");
+                a.setAttribute("class","autocomplete-items");
                 /*append the DIV element as a child of the autocomplete container:*/
                 this.parentNode.appendChild(a);
                 var total = 0;
                 /*for each item in the array...*/
                 for (i = 0; i < arr.length; i++) {
                     /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    if (arr[i].substr(0,val.length).toUpperCase() == val.toUpperCase()) {
                         /*create a DIV element for each matching element:*/
                         b = document.createElement("DIV");
                         /*make the matching letters bold:*/
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML = "<strong>" + arr[i].substr(0,val.length) + "</strong>";
                         b.innerHTML += arr[i].substr(val.length);
                         /*insert a input field that will hold the current array item's value:*/
                         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                         /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function (e) {
+                        b.addEventListener("click",function (e) {
                             /*insert the value for the autocomplete text field:*/
                             inp.value = this.getElementsByTagName("input")[0].value;
                             /*close the list of autocompleted values,
@@ -275,7 +279,7 @@
                 }
             });
             /*execute a function presses a key on the keyboard:*/
-            inp.addEventListener("keydown", function (e) {
+            inp.addEventListener("keydown",function (e) {
                 var x = document.getElementById(this.id + "autocomplete-list");
                 if (x) x = x.getElementsByTagName("div");
                 if (e.keyCode == 40) {
@@ -291,7 +295,7 @@
                     /*and and make the current item more visible:*/
                     addActive(x);
                 } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    /*If the ENTER key is pressed,prevent the form from being submitted,*/
                     e.preventDefault();
                     if (currentFocus > -1) {
                         /*and simulate a click on the "active" item:*/
@@ -326,18 +330,19 @@
                 }
             }
             /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
+            document.addEventListener("click",function (e) {
                 closeAllLists(e.target);
             });
         }
 
         //var all = "african boxthorn,african daisy,african feather grass,african lovegrass,alligator weed,amsinckia,angled onion,apple of sodom,artichoke thistle,azolla,bathurst burr,bindweed,blackberry,boneseed,branched broomrape,bridal creeper,buffalo burr,caltrop,camel thorn,cape broom,cape tulip one leaf,cape tulip two leaf,chilean cestrum,chilean needle grass,devils claw purple flower,devils claw yellow flower,dodder,english broom,fireweed,flax leaved broom,golden thistle,gorse,great mullein,hardheads,hawkweed,hemlock,hoary cress,horehound,horestails,illyrian thistle,karoo and giraffe thorn,khaki weed,knotweed,mesquite,mexican feather grass,noogoora burr,pampas lily of the valley,parthenium weed,patersons curse,perennial thistle,poverty weed,prairie ground cherry,prickly pear drooping,prickly pear erect,ragwort,saffron thistle,salvinia,scotch thistle,serrated tussock,silverleaf nightshade,skeleton weed,slender thistles,soldier thistle,spiny broom,spiny burr grass,spiny emex,st barnabys thistle,st john's wort,star thistle,stemless thistle,sweet briar,tangled hypericum,thorn apple recurved,water hyacinth,wheel cactus,wild garlic,wild watsonia";
-        var allPostcodes = "3163,3147,3147,3182,3008,3143, 3068, 3183, 3125, 3123, 3052, 3055, 3171, 3152, 3127, 3008, 3800, 3070, 3194, 3066, 3131, 3058, 3013, 3051, 3032, 3056, 3031, 3032, 3031, 3135, 3056, 3057, 3081, 3056, 3085, 3019, 3051, 3141, 3067, 3125, 3083, 3075, 3049, 3033, 3153, 3034, 3976, 3131, 3051, 3064, 3179, 3429, 3072, 3064, 3150, 3058, 3199, 3181, 3335, 3030";
+        var allPostcodes = "3163,3147,3182,3008,3143,3068,3183,3123,3052,3055,3171,3152,3127,3800,3070,3194,3066,3013,3132,3032,3031,3135,3057,3081,3056,3085,3019,3141,3067,3125,3083,3075,3049,3033,3153,3034,3976,3131,3051,3064,3179,3429,3072,3150,3058,3199,3181,3335,3030";
         var postcodes = allPostcodes.split(",");
         /*An array containing all the country names in the world:*/
         //var countries = all.split(",");
 
-        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        //autocomplete(document.getElementById("subject"), countries);
-        autocomplete(document.getElementById("postcode"), postcodes);
+        /*initiate the autocomplete function on the "myInput" element,and pass along the countries array as possible autocomplete values:*/
+        //autocomplete(document.getElementById("subject"),countries);
+        autocomplete(document.getElementById("postcode"),postcodes);
     </script>
+

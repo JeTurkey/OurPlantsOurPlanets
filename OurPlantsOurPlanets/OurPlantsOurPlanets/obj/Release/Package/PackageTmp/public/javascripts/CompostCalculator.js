@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
             if (!cLength || !cWidth || !cThick) {
                 $('.comp-result').html('<p class="alert">Please fill in all dimensions.');
             } else if (!$.isNumeric(cLength) || !$.isNumeric(cWidth) || !$.isNumeric(cThick)) {
-                $('.comp-result').html('<p class="alert">Only numeric dimensions are allowed.');
+                $('.comp-result').html('<p class="alert">Only numeric dimensions are allowed. (Max limit = 3 digits)');
             } else if ((cLength <= 0) || (cWidth <= 0) || (cThick <= 0)) {
                 $('.comp-result').html('<p class="alert">Dimensions must not be negative or zero.');
             } else {
@@ -115,7 +115,7 @@ jQuery(document).ready(function ($) {
             if (!cDiam || !cThick) {
                 $('.comp-result').html('<p class="alert">Please fill in all dimensions.');
             } else if (!$.isNumeric(cDiam) || !$.isNumeric(cThick)) {
-                $('.comp-result').html('<p class="alert">Only numeric dimensions are allowed.');
+                $('.comp-result').html('<p class="alert">Only numeric dimensions are allowed. (Max limit = 3 digits)');
             } else if ((cDiam <= 0) || (cThick <= 0)) {
                 $('.comp-result').html('<p class="alert">Dimensions must not be negative or zero.');
             }

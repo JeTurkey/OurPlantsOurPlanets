@@ -31,6 +31,8 @@ var calculatorService = require('./routes/calculatorService');
 
 
 var app = express();
+
+//set lifetime of a single user session
 app.use(session({ secret: 'XASDASDA', cookie: { maxAge: 60000*60*2 }}));
 
 // view engine setup
