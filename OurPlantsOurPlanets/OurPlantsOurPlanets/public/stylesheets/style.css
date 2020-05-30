@@ -13657,7 +13657,7 @@ h7 {
 }
 
 .open {
-    width: 250px;
+    width: inherit;
 }
 
 /* Styling for place details */
@@ -14002,7 +14002,7 @@ h7 {
     border-color: #4e9525;
 }
 
-.open {
+.open-map {
     width: 250px;
 }
 
@@ -27722,4 +27722,8 @@ table {
 
 .hero-wrap.hero-wrap-2 {
     height: 400px;
+}
+
+.mulch-calculator input[type="submit"]:focus {
+    cursor:not-allowed;
 }
