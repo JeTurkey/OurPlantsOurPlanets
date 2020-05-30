@@ -155,19 +155,19 @@
                                     <div class="row main">
                                         <h5 class="measurements">Enter the measurements</h5>
                                         <div class="row mulch-length-row hidden">
-                                            <label for="mulch-length " >Length (m.)</label>
+                                            <label for="mulch-length ">Length (m.)</label>
                                             <input type="text" id="mulch-length" class="mulch-length" name="mulch-length" size="2" maxlength="3" value="" data-toggle="tooltip" title="Enter your garden length in meters." />
                                         </div>
                                         <div class="row mulch-width-row hidden">
-                                            <label for="mulch-width" >Width (m.)</label>
+                                            <label for="mulch-width">Width (m.)</label>
                                             <input type="text" id="mulch-width" class="mulch-width" name="mulch-width" size="2" maxlength="3" value="" data-toggle="tooltip" title="Enter your garden width in meters." />
                                         </div>
                                         <div class="row mulch-diam-row hidden">
-                                            <label for="mulch-diam" >Diameter (m.)</label>
+                                            <label for="mulch-diam">Diameter (m.)</label>
                                             <input type="text" id="mulch-diam" class="mulch-diam" name="mulch-diam" size="2" maxlength="3" value="" data-toggle="tooltip" title="Enter your garden diameter in meters." />
                                         </div>
                                         <div class="row mulch-thick-row hidden">
-                                            <label for="mulch-thick" >Thickness (cm.)</label>
+                                            <label for="mulch-thick">Thickness (cm.)</label>
                                             <input type="text" id="mulch-thick" class="mulch-thick" name="mulch-thick" size="2" maxlength="3" value="" data-toggle="tooltip" title="Enter the mulch thickness needed in centimeters" />
                                         </div>
                                     </div>
@@ -186,7 +186,6 @@
         </div>
     </section>
     <!-- .mulch-calculator ends -->
-
     <!--Sticky Notes section-->
     <section class="ftco-section">
         <div class="row justify-content-center ">
@@ -452,7 +451,13 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="tooltip"]').tooltip();
+
+            $('[data-toggle="tooltip"]').click(function () {
+                $('[data-toggle="tooltip"]').tooltip("hide");
+
+            });
         });
+
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
