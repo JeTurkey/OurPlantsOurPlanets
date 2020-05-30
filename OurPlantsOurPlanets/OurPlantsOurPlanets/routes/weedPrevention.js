@@ -46,7 +46,9 @@ router.get('/', function (req, res) {
                     '<span class="subheading" style="width:100%;text-align:center"> Weed Prevention </span>' +
                     '<h2 class="mb-4">Weed Growth Predictions</span></div></div>';
                 //sets page content
+
                 htmlString = htmlString + "<p style=\"font-weight:500;text-align:center\">" +
+
                     "Prevention is better than cure! Help prevent weeds from germinating throughout the year near your locality."+
                 "The best way to manage weeds is to prevent them from becoming established in the first place," +
                     " check our weed predictor to help you through the coming months!" + "</p>";

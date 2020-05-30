@@ -83,7 +83,11 @@ router.get('/', function (req, res) {
 
                         var idUrl = results[i].common_name;
                         var image = '/images/weeds/' + results[i].common_name.split(' ').join('_') + '.jpg';
+
                         if (!results[i].img_link) {
+
+                        if (!results[i].img_link.endsWith(".jpg")) {
+
                             image = "/images/no-image.jpg";
                         }
                         htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl + '" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';

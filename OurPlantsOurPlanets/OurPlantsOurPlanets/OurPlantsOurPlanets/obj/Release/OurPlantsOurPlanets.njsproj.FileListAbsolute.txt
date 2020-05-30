@@ -1,0 +1,21 @@
+C:\Users\Nimisha\source\repos\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Nimisha\source\repos\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\source\repos\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Sana\Desktop\OurPlantsOurPlanets (2)\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Sana\Desktop\OurPlantsOurPlanets (2)\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Sana\Desktop\OurPlantsOurPlanets (2)\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Nimisha\Downloads\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Nimisha\Downloads\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\Downloads\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\Desktop\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Sana\Desktop\temp\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Nimisha\Downloads\OurPlantsOurPlanets-master\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Nimisha\Downloads\OurPlantsOurPlanets-master\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\Downloads\OurPlantsOurPlanets-master\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
+C:\Users\Nimisha\Desktop\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsprojAssemblyReference.cache
+C:\Users\Nimisha\Desktop\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\obj\Release\OurPlantsOurPlanets.njsproj.CoreCompileInputs.cache
+C:\Users\Nimisha\Desktop\Final\OurPlantsOurPlanets\OurPlantsOurPlanets\OurPlantsOurPlanets\bin\Microsoft.NodejsTools.WebRole.dll
