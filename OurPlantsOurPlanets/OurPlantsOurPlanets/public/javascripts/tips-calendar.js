@@ -26,8 +26,8 @@ $(document).ready(function () {
     $("#february").hide();
     $("#march").hide();
     $("#april").hide();
-    $("#may1").show();
-    $("#june").hide();
+    $("#may1").hide();
+    $("#june").show();
     $("#july").hide();
     $("#august").hide();
     $("#september").hide();

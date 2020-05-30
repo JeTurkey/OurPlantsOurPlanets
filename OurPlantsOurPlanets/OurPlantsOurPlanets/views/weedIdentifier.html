@@ -176,6 +176,7 @@
             <div class="col-md-10 text-center heading-section">
                 <span class="subheading">Odd One Out!</span>
                 <h2 class="mb-4">Weed Identifier</h2>
+                <p style="text-align:center; font-weight:500">A weed can be any plant that grows without invitation, crashing your garden party! Our weed identification tool helps you identify these pesky plants and know more about their impacts and methods of control. </p>
             </div>
         </div>
     </div>
@@ -193,13 +194,13 @@
                                             <div class="col-md-12">
                                                 <div class="form-group autocomplete" style="text-align:left">
                                                     <label class="label" for="subject">Weed Name</label>
-                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Weed Name">
+                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Enter Weed Name (e.g. African Boxthorn)">
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group" style="text-align:left">
                                                     <label class="label" for="name">Appearance</label>
-                                                    <select name="appearance" id="name" class="form-control">
+                                                    <select name="appearance" id="name" class="form-control" data-toggle="tooltip" title="Choose the appearance of the weed">
                                                         <option value="Any">Appearance</option>
                                                         <option value="Shrub">Shrub</option>
                                                         <option value="Succulent">Succulent</option>
@@ -214,7 +215,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group" style="text-align:left">
                                                     <label class="label" for="email">Flower Color</label>
-                                                    <select class="form-control" name="email" id="email">
+                                                    <select class="form-control" name="email" id="email" data-toggle="tooltip" title="Select the flower colour of the weed">
                                                         <option value="Any">Flower Color</option>
                                                         <option value="White">White</option>
                                                         <option value="Red">Red</option>
@@ -595,3 +596,10 @@
         autocomplete(document.getElementById("subject"), countries);
         autocomplete(document.getElementById("postcode"), postcodes);
     </script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+</html>

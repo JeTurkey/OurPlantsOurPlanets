@@ -160,8 +160,8 @@ function showDetails(placeResult, marker, status) {
 // Displays place details in a sidebar
 function showPanel(placeResult) {
     // If infoPane is already open, close it
-    if (infoPane.classList.contains("open")) {
-        infoPane.classList.remove("open");
+    if (infoPane.classList.contains("open-map")) {
+        infoPane.classList.remove("open-map");
     }
 
     // Clear the previous details
@@ -215,5 +215,5 @@ function showPanel(placeResult) {
     }
 
     // Open the infoPane
-    infoPane.classList.add("open");
+    infoPane.classList.add("open-map");
 }

@@ -61,41 +61,48 @@ router.get('/', function (req, res) {
             function printCard(item, index) {
                 var queryString = 'SELECT common_name, basic_description,img_link from weed where common_name like \'' + item.toLowerCase() + '%\'';
                 connection.query(queryString, function (error, results, fields) {
-                        htmlString = htmlString + '<div style="display:none" class="alphabet-content" id="' + item.toLowerCase() + '">';
+                    htmlString = htmlString + '<div style="display:none" class="alphabet-content" id="' + item.toLowerCase() + '">';
                     htmlString = htmlString + '<section class="ftco-section bg-light"><div class="container"><div class="row d-flex">';
 
                     if (error) var name = 'problem';
                     for (var i = 0; i < results.length; i++) {
                         var replacement = results[i].basic_description;
-                        if (results[i].basic_description.toString().length < 105) {
-                            var remaining = 108 - results[i].basic_description.length;
-                            var filler = ' <span style="color:white">';
-                            for (var k = 0; k < remaining; k++) {
-                                filler = filler + "_";
+                        if (results[i].basic_description.length < 105) {
+                            var remaining = 95 - results[i].basic_description.length;
+                            var filler = ' <span style="color:white;white-space:pre-line">';
+                            for (var k = 0; k < remaining / 2; k++) {
+                                filler = filler + "_ ";
                             }
-                            replacement = replacement + filler+'</span>';
+                            replacement = replacement + filler + '</span>';
                         }
-                        if (results[i].basic_description.toString().length > 113) {
-                            replacement = results[i].basic_description.substring(0, 113)+'...';
+
+                        //replaces some text if description is too long
+                        if (results[i].basic_description.toString().length > 87) {
+                            replacement = results[i].basic_description.substring(0, 87) + '...';
                         }
+
                         var idUrl = results[i].common_name;
                         var image = '/images/weeds/' + results[i].common_name.split(' ').join('_') + '.jpg';
+
+                        if (!results[i].img_link) {
+
                         if (!results[i].img_link.endsWith(".jpg")) {
+
                             image = "/images/no-image.jpg";
                         }
-                        htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl +'" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';
+                        htmlString = htmlString + '<div class="col-md-4 d-flex"><div class="blog-entry justify-content-end"><a href="/weedDescription?id=' + idUrl + '" class="block-20" style="background-image: url(\'' + image + '\');"></a ><div class="text p-4 float-right d-block"><h3 class="heading mb-0"><a href="/weedDescription?id=' + idUrl + '">' + results[i].common_name + '</a></h3><p>' + replacement + '</p><p><a href="/weedDescription?id=' + idUrl + '" class="btn btn-primary" style="font-size:12px">Read more</a></p></div></div></div>';
                     }
                     htmlString = htmlString + '</div></div></section>';
                     htmlString = htmlString + '</div>';
-                    
+                    htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weed-Encyclopedia.js" ></script >';
+                    fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
+                        htmlString = htmlString + data.toString();
+                        htmlString = htmlString.replace("65279", "");
+                        res.send(htmlString);
+                    });
                 });
             }
-            htmlString = htmlString + '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <script src = "/javascripts/weed-Encyclopedia.js" ></script >';
-            fs.readFile(path.join('D:/home/site/wwwroot' + '/views/footer.html'), function (err, data) {
-                htmlString = htmlString + data.toString();
-                htmlString = htmlString.replace("65279", "");
-                res.send(htmlString);
-            });
+           
         });
     });
 });

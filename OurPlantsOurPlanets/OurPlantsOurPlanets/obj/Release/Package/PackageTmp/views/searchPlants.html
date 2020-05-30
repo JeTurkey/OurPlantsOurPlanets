@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -23,6 +23,10 @@
     <link href="/stylesheets/style.css" rel="stylesheet" />
     <link rel="shortcut icon" href="/images/Team Logo.jpg" type="image/x-icon">
     <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
         #overlay {
             position: fixed;
             display: none;
@@ -164,7 +168,7 @@
         <div class="container">
             <div class="row no-gutters slider-text align-items-end justify-content-center">
                 <div class="col-md-9 pb-5 text-center">
-                    <h1 class="mb-3 bread">Plants 101</h1>
+                    <h1 class="mb-3 bread" style="font-size:40px;">Plants 101</h1>
                 </div>
             </div>
         </div>
@@ -180,92 +184,205 @@
             <div class="row justify-content-end">
                 <div class="wrapper justify-content-end">
                     <div class="no-gutters" style="text-align:right;padding-right:30px;margin-top:10px">
-                        <a href="/plantCollection" class="btn btn-primary" style="font-size:15px">My Collection &gt; </a></div></div>
+                        <a href="/plantCollection" class="btn btn-primary" style="font-size:15px">My Collection &gt; </a>
                     </div>
                 </div>
-</section>
-                <section class="ftco-section bg-light">
-                    <div class="container">
-                        <div class="row justify-content-center">
+            </div>
+        </div>
+    </section>
+    <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row no-gutters">
                             <div class="col-md-12">
-                                <div class="wrapper">
-                                    <div class="row no-gutters">
-                                        <div class="col-md-12">
-                                            <div class="contact-wrap w-100 p-md-5 p-4 justify-content-center">
+                                <div class="contact-wrap w-100 p-md-5 p-4 justify-content-center">
 
-                                                <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
-                                                    <div class="row">
-                                                        <div class="col-md-3">
-                                                            <div class="form-group autocomplete" style="text-align:left">
-                                                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Plant Name">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group" style="text-align:left">
-                                                                <select name="color" id="name" class="form-control">
-                                                                    <option value="Any">Color</option>
-                                                                    <option value="White">White</option>
-                                                                    <option value="Pink">Pink</option>
-                                                                    <option value="Purple">Purple</option>
-                                                                    <option value="Plum">Plum</option>
-                                                                    <option value="Ivory">Ivory</option>
-                                                                    <option value="Red">Red</option>
-                                                                    <option value="Yellow">Yellow</option>
-                                                                    <option value="Black">Black</option>
-                                                                    <option value="Cream">Cream</option>
-                                                                    <option value="Orange">Orange</option>
-                                                                    <option value="Brown">Brown</option>
-                                                                    <option value="Green">Green</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group" style="text-align:left">
-                                                                <select class="form-control" name="height" id="email">
-                                                                    <option value="Any">Height</option>
-                                                                    <option value="Short">Short</option>
-                                                                    <option value="Medium">Medium</option>
-                                                                    <option value="Tall">Tall</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group" style="text-align:left">
-                                                                <select class="form-control" name="season" id="email">
-                                                                    <option value="Any">Season</option>
-                                                                    <option value="All">All Seasons</option>
-                                                                    <option value="Spring">Spring</option>
-                                                                    <option value="Summer">Summer</option>
-                                                                    <option value="Autumn">Autumn</option>
-                                                                    <option value="Winter">Winter</option>
-                                                                    <option value="Fall">Fall</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-2">
-                                                            <div class="form-group" style="text-align:left">
-                                                                <select class="form-control" name="texture" id="email">
-                                                                    <option value="Any">Texture</option>
-                                                                    <option value="Sa">Sandy</option>
-                                                                    <option value="Lo">Loamy</option>
-                                                                    <option value="Cl">Clay</option>
-                                                                    <option value="Li">Silty</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-1">
-                                                            <div class="form-group" style="text-align:left">
-                                                                <input type="submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
-                                                                <div class="submitting"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                                    <form autocomplete="off" method="POST" id="contactForm" name="contactForm" class="contactForm" style="text-align:center">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group autocomplete" style="text-align:left">
+                                                    <input type="text" class="form-control" name="subject" id="names" placeholder="Plant Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group" style="text-align:left">
+                                                    <select name="color" id="name" class="form-control">
+                                                        <option value="Any">Color</option>
+                                                        <option value="White">White</option>
+                                                        <option value="Pink">Pink</option>
+                                                        <option value="Purple">Purple</option>
+                                                        <option value="Plum">Plum</option>
+                                                        <option value="Ivory">Ivory</option>
+                                                        <option value="Red">Red</option>
+                                                        <option value="Yellow">Yellow</option>
+                                                        <option value="Black">Black</option>
+                                                        <option value="Cream">Cream</option>
+                                                        <option value="Orange">Orange</option>
+                                                        <option value="Brown">Brown</option>
+                                                        <option value="Green">Green</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group" style="text-align:left">
+                                                    <select class="form-control" name="height" id="email">
+                                                        <option value="Any">Height</option>
+                                                        <option value="Short">Short</option>
+                                                        <option value="Medium">Medium</option>
+                                                        <option value="Tall">Tall</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group" style="text-align:left">
+                                                    <select class="form-control" name="season" id="email">
+                                                        <option value="Any">Season</option>
+                                                        <option value="All">All Seasons</option>
+                                                        <option value="Spring">Spring</option>
+                                                        <option value="Summer">Summer</option>
+                                                        <option value="Autumn">Autumn</option>
+                                                        <option value="Winter">Winter</option>
+                                                        <option value="Fall">Fall</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="form-group" style="text-align:left">
+                                                    <select class="form-control" name="texture" id="email">
+                                                        <option value="Any">Texture</option>
+                                                        <option value="Sa">Sandy</option>
+                                                        <option value="Lo">Loamy</option>
+                                                        <option value="Cl">Clay</option>
+                                                        <option value="Li">Silty</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <div class="form-group" style="text-align:left">
+                                                    <input type="submit" value="Search" class="btn btn-primary" style="font-size:medium;margin-top:5px">
+                                                    <div class="submitting"></div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                var total = 0;
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                        total = total + 1;
+                        if (total == 10) break;
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed,prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+
+        //var all = "african boxthorn,african daisy,african feather grass,african lovegrass,alligator weed,amsinckia,angled onion,apple of sodom,artichoke thistle,azolla,bathurst burr,bindweed,blackberry,boneseed,branched broomrape,bridal creeper,buffalo burr,caltrop,camel thorn,cape broom,cape tulip one leaf,cape tulip two leaf,chilean cestrum,chilean needle grass,devils claw purple flower,devils claw yellow flower,dodder,english broom,fireweed,flax leaved broom,golden thistle,gorse,great mullein,hardheads,hawkweed,hemlock,hoary cress,horehound,horestails,illyrian thistle,karoo and giraffe thorn,khaki weed,knotweed,mesquite,mexican feather grass,noogoora burr,pampas lily of the valley,parthenium weed,patersons curse,perennial thistle,poverty weed,prairie ground cherry,prickly pear drooping,prickly pear erect,ragwort,saffron thistle,salvinia,scotch thistle,serrated tussock,silverleaf nightshade,skeleton weed,slender thistles,soldier thistle,spiny broom,spiny burr grass,spiny emex,st barnabys thistle,st john's wort,star thistle,stemless thistle,sweet briar,tangled hypericum,thorn apple recurved,water hyacinth,wheel cactus,wild garlic,wild watsonia";
+        var allPostcodes = "angled lobelia,austral bugle,beaked hakea,berry saltbush,blackwood,bladder saltbush,blue boronia,blue mallee,bottle washers,brown stringybark,button everlasting,climbing lignum,coast banksia,coast daisy - bush,comb grevillea,common wallaby - grass,cushion bush,cut - leaf daisy,desert banksia,desert grevillea,desert hakea,drooping sheoak,dwarf nealie,dwarf sheoak,dysantha,exutiacies,fleshy saltbush,fragrant saltbush,golden pennants,golden spray,golden wattle,goodenia,Grampians thryptomene,green mallee,grey box,grey mulga,gunnii,hairpin banksia,hairy - pod wattle,hakea wattle,hard - leaf wattle,hill wallaby - grass,holly grevillea,hop goodenia,karkalla,kneed wallaby - grass,kurrajong,large kangaroo apple,lemon bottlebrush,lilly pilly,mallee wattle,manna gum,manna wattle,marsh saltbush,matted bush - pea,mealy wattle,messmate stringybark,milkmaids,muntries,myrtle wattle,nardoo,native flax,nealie,paper flower,pearl bluebush,pennywort,ploughshare wattle,porcupine grass,prickly moses,pungens,red box,red ironbark,red mallee_1,red mallee_2,red parrot - pea,red - leg grass,river bottlebrush,rock wattle,running postman,scented mat - rush,scented paperbark,seaberry saltbush,shrub violet,silver banksia,slaty sheoak,slender boronia,slender westringia,spear - grass,spotted gum,sticky goodenia,sticky wattle,streaked wattle,swamp gum,swamp mazus,Tasman flax - lily,tassel sedge,tussock grass,twiggy bush - pea,twiggy daisy - bush,umbrella wattle,vanilla lily,varnish wattle,wallaby - grass,wallowa,white box,white correa,wirilda,wiry bauera,yellow box,yorrell";
+        var postcodes = allPostcodes.split(",");
+        /*An array containing all the country names in the world:*/
+        //var countries = all.split(",");
+
+        /*initiate the autocomplete function on the "myInput" element,and pass along the countries array as possible autocomplete values:*/
+        //autocomplete(document.getElementById("subject"),countries);
+        autocomplete(document.getElementById("names"), postcodes);
+    </script>
