@@ -15,6 +15,7 @@ Our Plants Our planet is a weed management and gardening website that is designe
 <li><b>Garden Calendar:</b> Provides monthly gardening tips for the user to refer to year round </li>
 <li><b>Community Gardens Tool:</b> Allows the user to search for nearby community gardens.</li>
 </ol>
+
 ## Development And Deployment Software
 The application is built using the node.js + express.js framework. At the front end, pages are generated using raw HTML, CSS, Javascript and Bootstrap 4. <br />
 The application is rendered on Node.js 12 LTS run time stack on azure cloud services  and is built and published using the  Visual Studio IDE
